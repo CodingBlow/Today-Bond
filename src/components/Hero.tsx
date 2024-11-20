@@ -100,7 +100,7 @@ const Hero = () => {
               <Swiper
                 spaceBetween={20}
                 autoplay={{
-                  delay: 3000,
+                  delay: 2000,
                   disableOnInteraction: false,
                 }}
                 speed={1000}
