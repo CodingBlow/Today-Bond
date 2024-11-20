@@ -20,15 +20,21 @@ export default function CartPage() {
   const finalTotal = subtotal + shipping + tax;
 
   const handleCheckout = () => {
-    if (!isAuthenticated) {
-      toast.error("Please login to checkout");
-      navigate("/login");
-      return;
-    }
-    toast.success("Order placed successfully!");
-    clearCart();
-    navigate("/");
+    // Passing the cart data, shipping, tax, and total to the Payment page
+    navigate("/payment", {
+      state: {
+        cartItems: items,
+        subtotal,
+        shipping,
+        tax,
+        totalAmount: finalTotal,
+      },
+    });
+  
+    toast.success("Redirecting to payment...");
+    clearCart(); // Clear cart after checkout initiation
   };
+  
 
   if (items.length === 0) {
     return (
@@ -106,7 +112,6 @@ export default function CartPage() {
           ))}
         </div>
 
-        {items.map((item) => (
         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm h-fit">
           <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
             Order Summary
@@ -114,7 +119,7 @@ export default function CartPage() {
           <div className="space-y-3 mb-6">
             <div className="flex justify-between text-gray-600 dark:text-gray-300">
               <span>Subtotal</span>
-              <span>${(item.price * item.quantity).toFixed(2)}</span>
+              <span>${subtotal.toFixed(2)}</span>
             </div>
             <div className="flex justify-between text-gray-600 dark:text-gray-300">
               <span>Shipping</span>
@@ -157,7 +162,6 @@ export default function CartPage() {
             </p>
           )}
         </div>
-        ))}
       </div>
     </div>
   );
