@@ -68,7 +68,7 @@ export const products = [
   {
     id: 7,
     name: "Construction Grade",
-    price: 15.99,
+    price: 14.99,
     image: "https://m.media-amazon.com/images/I/716ZJvWtFrL._SY445_.jpg",
     description: "Maximum strength adhesive for construction projects",
     category: "industrial",
@@ -79,7 +79,7 @@ export const products = [
   {
     id: 8,
     name: "Construction Grade",
-    price: 15.99,
+    price: 10.99,
     image: "https://m.media-amazon.com/images/I/716ZJvWtFrL._SY445_.jpg",
     description: "Maximum strength adhesive for construction projects",
     category: "industrial",
@@ -90,7 +90,7 @@ export const products = [
   {
     id: 9,
     name: "Construction Grade",
-    price: 15.99,
+    price: 6.99,
     image: "https://m.media-amazon.com/images/I/716ZJvWtFrL._SY445_.jpg",
     description: "Maximum strength adhesive for construction projects",
     category: "industrial",
@@ -101,7 +101,7 @@ export const products = [
   {
     id: 10,
     name: "Construction Grade",
-    price: 15.99,
+    price: 7.99,
     image: "https://m.media-amazon.com/images/I/716ZJvWtFrL._SY445_.jpg",
     description: "Maximum strength adhesive for construction projects",
     category: "industrial",
@@ -112,7 +112,7 @@ export const products = [
   {
     id: 11,
     name: "Construction Grade",
-    price: 15.99,
+    price: 8.99,
     image: "https://m.media-amazon.com/images/I/716ZJvWtFrL._SY445_.jpg",
     description: "Maximum strength adhesive for construction projects",
     category: "industrial",
@@ -123,7 +123,7 @@ export const products = [
   {
     id: 12,
     name: "Construction Grade",
-    price: 15.99,
+    price: 9.99,
     image: "https://m.media-amazon.com/images/I/716ZJvWtFrL._SY445_.jpg",
     description: "Maximum strength adhesive for construction projects",
     category: "industrial",

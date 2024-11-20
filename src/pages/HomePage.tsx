@@ -5,6 +5,7 @@ import Products from '../components/Products';
 import Testimonials from '../components/Testimonials';
 import VideoSection from '../components/VideoSection';
 import FeaturedProducts from '../components/FearuredProducts';
+// import FearuredProducts from '../components/FearuredProducts';
 
 export default function HomePage() {
   return (
