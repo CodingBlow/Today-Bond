@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { CreditCard, Lock, Shield, Truck } from "lucide-react";
+import { Lock, Shield, Truck } from "lucide-react";
 import toast from "react-hot-toast";
 
 const Payment = () => {
@@ -61,7 +61,7 @@ const Payment = () => {
       name: "Your Store Name",
       description: "Test Transaction",
       image: "https://example.com/your-logo.png",
-      handler: function (response: any) {
+      handler: function () {
         toast.success("Payment successful!");
         navigate("/order-success");
       },
