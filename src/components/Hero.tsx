@@ -23,15 +23,15 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-gray-900 to-gray-800 py-16 md:py-24">
+    <section className="relative bg-gradient-to-b from-neutral-900 to-neutral-800 py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Left Text Section */}
           <div className="md:w-1/2 text-white text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight bg-gradient-to-r from-blue-400 to-blue-600 text-transparent bg-clip-text">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight bg-gradient-to-r from-red-500 to-amber-500 text-transparent bg-clip-text">
               Innovative Adhesive Solutions
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-10 leading-relaxed">
+            <p className="text-lg md:text-xl text-neutral-300 mb-6 md:mb-10 leading-relaxed">
               Experience unparalleled bonding performance with our cutting-edge industrial adhesives, meticulously engineered for excellence.
             </p>
             <div className="space-y-4 mb-8">
@@ -44,14 +44,14 @@ const Hero = () => {
                   key={index}
                   className="flex items-center gap-4 justify-center md:justify-start"
                 >
-                  <span className="text-blue-500 text-2xl">•</span>
-                  <p className="text-md md:text-lg font-medium text-gray-200">
+                  <span className="text-red-500 text-2xl">•</span>
+                  <p className="text-md md:text-lg font-medium text-neutral-200">
                     {point}
                   </p>
                 </div>
               ))}
             </div>
-            <button className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white px-8 py-3 md:px-10 md:py-4 rounded-lg font-semibold text-sm md:text-lg transition-transform duration-300 transform hover:scale-105 shadow-lg">
+            <button className="bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-700 hover:to-amber-700 text-white px-8 py-3 md:px-10 md:py-4 rounded-lg font-semibold text-sm md:text-lg transition-transform duration-300 transform hover:scale-105 shadow-lg">
               Discover Our Range
             </button>
           </div>
@@ -68,13 +68,13 @@ const Hero = () => {
               grabCursor={true}
               centeredSlides={true}
               loop={true}
-              slidesPerView={1} // Single slide view on mobile
+              slidesPerView={1}
               breakpoints={{
                 768: {
-                  slidesPerView: 1.2, // Larger slides for tablets and above
+                  slidesPerView: 1.2,
                 },
                 1024: {
-                  slidesPerView: 1.5, // More slides for desktops
+                  slidesPerView: 1.5,
                 },
               }}
               navigation={true}
@@ -94,10 +94,10 @@ const Hero = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent group-hover:opacity-90 transition-opacity duration-500">
                       <div className="absolute bottom-0 p-4 md:p-6 text-white">
-                        <h3 className="text-xl md:text-2xl font-bold mb-1 bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+                        <h3 className="text-xl md:text-2xl font-bold mb-1 bg-gradient-to-r from-red-400 to-amber-500 text-transparent bg-clip-text">
                           {slide.title}
                         </h3>
-                        <p className="text-sm md:text-base text-gray-300 font-medium">
+                        <p className="text-sm md:text-base text-neutral-300 font-medium">
                           {slide.description}
                         </p>
                       </div>
@@ -110,7 +110,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute inset-0 bg-blue-600/10 mix-blend-multiply pointer-events-none"></div>
+      <div className="absolute inset-0 bg-red-600/10 mix-blend-multiply pointer-events-none"></div>
     </section>
   );
 };
