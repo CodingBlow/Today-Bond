@@ -1,14 +1,14 @@
 import {
   Facebook,
   Instagram,
-  Twitter,
   Mail,
   Phone,
   MapPin,
   ExternalLink,
+  Youtube,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo-Today.png";
+import Logo from "../assets/Logo-Today1.png";
 
 export default function Footer() {
   return (
@@ -22,7 +22,7 @@ export default function Footer() {
                 <img
                   src={Logo}
                   alt="Today Bond Logo"
-                  className="h-14 w-auto hover:opacity-90 transition-opacity"
+                  className="h-20 w-25 hover:opacity-90 transition-opacity"
                 />
               </Link>
             </div>
@@ -38,23 +38,20 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-6 text-lg">Quick Links</h4>
             <ul className="space-y-3">
               {[
-                "Privacy Policy",
-                "Terms & Conditions",
-                "Returns & Refunds",
-                "Shipping & Delivery",
-                "Admin Login",
-              ].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`/${item
-                      .toLowerCase()
-                      .replace(/ /g, "-")
-                      .replace(/&/g, "and")}`}
+                { name: "Privacy Policy", path: "/privacy-policy" },
+                { name: "Terms & Conditions", path: "/terms-and-conditions" },
+                { name: "Returns & Refunds", path: "/returns-and-refunds" },
+                { name: "Shipping & Delivery", path: "/shipping-and-delivery" },
+                { name: "Admin Login", path: "/admin-login" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
                     className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
                   >
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {item}
-                  </a>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -70,11 +67,21 @@ export default function Footer() {
               </li>
               <li className="flex items-center text-gray-400">
                 <Phone className="h-5 w-5 mr-3 text-blue-500" />
-                <span>+91 9389678954</span>
+                <a
+                  href="tel:+919389678954"
+                  className="hover:text-white transition-colors duration-300"
+                >
+                  +91 9389678954
+                </a>
               </li>
               <li className="flex items-center text-gray-400">
                 <Mail className="h-5 w-5 mr-3 text-blue-500" />
-                <span>info@todaybond.com</span>
+                <a
+                  href="mailto:info@todaybond.com"
+                  className="hover:text-white transition-colors duration-300"
+                >
+                  info@todaybond.com
+                </a>
               </li>
             </ul>
           </div>
@@ -85,15 +92,30 @@ export default function Footer() {
               Connect With Us
             </h4>
             <div className="flex space-x-4">
-              {[Facebook, Instagram, Twitter].map((Icon, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  <Icon className="h-5 w-5" />
-                </a>
-              ))}
+              <a
+                href="https://facebook.com/todaybond"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="https://instagram.com/todaybond"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 p-3 rounded-full hover:bg-pink-600 transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://youtube.com/@todaybond"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-800 p-3 rounded-full hover:bg-blue-400 transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <Youtube className="h-5 w-5" />
+              </a>
             </div>
           </div>
         </div>

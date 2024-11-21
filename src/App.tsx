@@ -15,6 +15,10 @@ import SignupPage from "./pages/SignupPage";
 import Payment from "./pages/Payment";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboards";
+import ShippingPolicy from "./pages/ShippingPolicy";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsandCon from "./pages/TermsandCon";
+import RefundPolicy from "./pages/RefundPolicy";
 
 function App() {
   return (
@@ -37,6 +41,13 @@ function App() {
               <Route path="payment" element={<Payment />} />
               <Route path="/admin-login" element={<AdminLogin />} />
               <Route path="/admin/dashboard" element={<AdminDashboard />} />
+              <Route
+                path="/shipping-and-delivery"
+                element={<ShippingPolicy />}
+              />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-and-conditions" element={<TermsandCon />} />
+              <Route path="returns-and-refunds" element={<RefundPolicy />} />
             </Routes>
           </main>
           <Footer />

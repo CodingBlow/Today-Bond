@@ -52,7 +52,12 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">Phone</h3>
-                    <p className="text-gray-600 dark:text-gray-300">+91 9389678954</p>
+                    <a
+                      href="tel:+919389678954"
+                      className="text-gray-600 dark:text-gray-300 hover:underline"
+                    >
+                      +91 9389678954
+                    </a>
                     <p className="text-gray-600 dark:text-gray-300">Monday - Friday, 9am - 5pm EST</p>
                   </div>
                 </div>
@@ -63,8 +68,19 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">Email</h3>
-                    <p className="text-gray-600 dark:text-gray-300">support@todaybond.com</p>
-                    <p className="text-gray-600 dark:text-gray-300">sales@todaybond.com</p>
+                    <a
+                      href="mailto:support@todaybond.com"
+                      className="text-gray-600 dark:text-gray-300 hover:underline"
+                    >
+                      support@todaybond.com
+                    </a>
+                    <br />
+                    <a
+                      href="mailto:sales@todaybond.com"
+                      className="text-gray-600 dark:text-gray-300 hover:underline"
+                    >
+                      sales@todaybond.com
+                    </a>
                   </div>
                 </div>
 
@@ -96,7 +112,10 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
                   Name
                 </label>
                 <input
@@ -111,7 +130,10 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
                   Email
                 </label>
                 <input
@@ -126,7 +148,10 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
                   Subject
                 </label>
                 <input
@@ -141,7 +166,10 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >
                   Message
                 </label>
                 <textarea

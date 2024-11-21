@@ -14,7 +14,7 @@ import {
 import { useCartStore } from "../store/cartStore";
 import { useAuthStore } from "../store/authStore";
 import { useThemeContext } from "../providers/ThemeProvider";
-import Logo from "../assets/Logo-Today.png";
+import Logo from "../assets/Logo-Today1.png";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,7 +64,7 @@ export default function Navbar() {
               to="/"
               className="transform hover:scale-105 transition-transform duration-200"
             >
-              <img src={Logo} alt="Today Bond Logo" className="h-14 w-auto" />
+              <img src={Logo} alt="Today Bond Logo" className="h-20 w-25" />
             </Link>
           </div>
 

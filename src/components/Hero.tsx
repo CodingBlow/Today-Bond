@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const slides = [
@@ -21,7 +22,7 @@ const Hero = () => {
       description: "Optimized for maximum efficiency",
     },
   ];
-  
+
   return (
     <section className="relative bg-gradient-to-b from-neutral-900 to-neutral-800 py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -32,7 +33,8 @@ const Hero = () => {
               Innovative Adhesive Solutions
             </h1>
             <p className="text-lg md:text-xl text-neutral-300 mb-6 md:mb-10 leading-relaxed">
-              Experience unparalleled bonding performance with our cutting-edge industrial adhesives, meticulously engineered for excellence.
+              Experience unparalleled bonding performance with our cutting-edge
+              industrial adhesives, meticulously engineered for excellence.
             </p>
             <div className="space-y-4 mb-8">
               {[
@@ -51,11 +53,12 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-            <button className="bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-700 hover:to-amber-700 text-white px-8 py-3 md:px-10 md:py-4 rounded-lg font-semibold text-sm md:text-lg transition-transform duration-300 transform hover:scale-105 shadow-lg">
-              Discover Our Range
-            </button>
+            <Link to="/shop">
+              <button className="bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-700 hover:to-amber-700 text-white px-8 py-3 md:px-10 md:py-4 rounded-lg font-semibold text-sm md:text-lg transition-transform duration-300 transform hover:scale-105 shadow-lg">
+                Shop Now
+              </button>
+            </Link>
           </div>
-
           {/* Right Swiper Section */}
           <div className="md:w-1/2 w-full">
             <Swiper
