@@ -21,7 +21,7 @@ const Hero = () => {
       description: "Optimized for maximum efficiency",
     },
   ];
-
+  
   return (
     <section className="relative bg-gradient-to-b from-neutral-900 to-neutral-800 py-16 md:py-24">
       <div className="container mx-auto px-4">

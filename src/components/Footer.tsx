@@ -8,6 +8,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import Logo from "../assets/Logo-Today.png";
 
 export default function Footer() {
   return (
@@ -19,7 +20,7 @@ export default function Footer() {
             <div className="flex-shrink-0">
               <Link to="/">
                 <img
-                  src="../src/assets/Logo-Today.png"
+                  src={Logo}
                   alt="Today Bond Logo"
                   className="h-14 w-auto hover:opacity-90 transition-opacity"
                 />
@@ -37,7 +38,6 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-6 text-lg">Quick Links</h4>
             <ul className="space-y-3">
               {[
-               
                 "Privacy Policy",
                 "Terms & Conditions",
                 "Returns & Refunds",
