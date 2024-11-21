@@ -37,10 +37,7 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-6 text-lg">Quick Links</h4>
             <ul className="space-y-3">
               {[
-                "Home",
-                "Shop",
-                "About Us",
-                "Contact",
+               
                 "Privacy Policy",
                 "Terms & Conditions",
                 "Returns & Refunds",
