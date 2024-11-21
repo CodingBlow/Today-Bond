@@ -7,14 +7,15 @@ export default function VideoSection() {
             See Today Bond in Action
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
-            Watch how our professional-grade adhesive delivers exceptional results
+            Watch how our professional-grade adhesive delivers exceptional
+            results
           </p>
         </div>
         
         <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl mx-auto max-w-3xl">
           <iframe
             className="w-full h-full absolute inset-0"
-            src="https://www.youtube.com/embed/v9bOWjwdTlg?si=2q6ZvhPYZphwoEiF&autoplay=1&mute=1"
+            src="https://youtu.be/G1XizCoSblg?si=olTMYF7qPfSqopbH"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
