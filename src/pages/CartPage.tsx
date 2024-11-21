@@ -30,11 +30,8 @@ export default function CartPage() {
         totalAmount: finalTotal,
       },
     });
-  
-    toast.success("Redirecting to payment...");
     clearCart(); // Clear cart after checkout initiation
   };
-  
 
   if (items.length === 0) {
     return (

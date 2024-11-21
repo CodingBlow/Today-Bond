@@ -1,4 +1,12 @@
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -28,10 +36,23 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6 text-lg">Quick Links</h4>
             <ul className="space-y-3">
-              {['Home', 'Shop', 'About Us', 'Contact'].map((item) => (
+              {[
+                "Home",
+                "Shop",
+                "About Us",
+                "Contact",
+                "Privacy Policy",
+                "Terms & Conditions",
+                "Returns & Refunds",
+                "Shipping & Delivery",
+                "Admin Login",
+              ].map((item) => (
                 <li key={item}>
-                  <a 
-                    href={`/${item.toLowerCase().replace(' ', '-')}`}
+                  <a
+                    href={`/${item
+                      .toLowerCase()
+                      .replace(/ /g, "-")
+                      .replace(/&/g, "and")}`}
                     className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
                   >
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -63,7 +84,9 @@ export default function Footer() {
 
           {/* Social Media */}
           <div>
-            <h4 className="text-white font-bold mb-6 text-lg">Connect With Us</h4>
+            <h4 className="text-white font-bold mb-6 text-lg">
+              Connect With Us
+            </h4>
             <div className="flex space-x-4">
               {[Facebook, Instagram, Twitter].map((Icon, index) => (
                 <a

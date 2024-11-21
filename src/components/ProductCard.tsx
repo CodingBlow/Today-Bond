@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import { ShoppingCart } from 'lucide-react';
-import { useCartStore } from '../store/cartStore';
-import { Product } from '../types';
-import toast from 'react-hot-toast';
+import { Link } from "react-router-dom";
+import { ShoppingCart } from "lucide-react";
+import { useCartStore } from "../store/cartStore";
+import { Product } from "../types";
+import toast from "react-hot-toast";
 
 interface ProductCardProps {
   product: Product;
@@ -13,7 +13,25 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   const handleAddToCart = () => {
     addItem(product);
-    toast.success(`${product.name} added to cart!`);
+    toast.success(`${product.name} added to cart!`, {
+      style: {
+        background: "var(--background)",
+        color: "var(--foreground)",
+        border: "1px solid var(--border)",
+        padding: "16px",
+        borderRadius: "8px",
+      },
+      className: `
+        !bg-white dark:!bg-gray-800 
+        !text-gray-900 dark:!text-white 
+        sm:!w-auto md:!max-w-md 
+        !text-sm md:!text-base
+        !font-medium
+      `,
+      duration: 2000,
+      position: window.innerWidth <= 768 ? "bottom-center" : "top-right",
+      icon: "🛍️",
+    });
   };
 
   return (
@@ -27,7 +45,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           />
         </div>
       </Link>
-      
+
       <div className="p-6">
         <Link to={`/product/${product.id}`}>
           <h3 className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-600 transition">
