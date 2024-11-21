@@ -1,37 +1,55 @@
+import { useState } from "react";
 import { ShoppingCart, Star } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { products } from "../data/products";
+import toast from "react-hot-toast";
 
-const products = [
-  {
-    id: 1,
-    name: "Ultra Strong Gel",
-    price: 9.99,
-    image:
-      "https://superbondglue.com/wp-content/uploads/2022/03/glue-bundle4-300x300.jpg",
-    description: "Professional-grade gel adhesive",
-    rating: 4.8,
-    inStock: true,
-  },
-  {
-    id: 2,
-    name: "Quick Bond Liquid",
-    price: 7.99,
-    image: "https://m.media-amazon.com/images/I/71RTXQQWyyL._AC_SY695_.jpg",
-    description: "Fast-setting liquid adhesive",
-    rating: 4.9,
-    inStock: true,
-  },
-  {
-    id: 3,
-    name: "Heavy Duty Formula",
-    price: 12.99,
-    image: "https://m.media-amazon.com/images/I/61PJ3-qmI7L._SX425_.jpg",
-    description: "Industrial strength bonding",
-    rating: 4.7,
-    inStock: true,
-  },
-];
+// Define the Product type
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  description: string;
+  rating: number;
+  inStock: boolean;
+}
 
 export default function Products() {
+  const [cart, setCart] = useState<Product[]>([]); // Set the type to Product[]
+  const navigate = useNavigate(); // Hook to navigate to a different route
+
+  // Filter products by unique IDs within the range of 1 to 6
+  const filteredProducts = products.filter(
+    (product) => product.id >= 1 && product.id <= 6
+  );
+
+  // Handle adding products to the cart and navigating to the product page
+  const addToCart = (product: Product) => {
+    setCart((prevCart) => [...prevCart, product]);
+    toast.success("Added to cart", {
+      style: {
+        background: "#1F2937",
+        color: "#FFFFFF",
+        padding: "16px",
+        borderRadius: "12px",
+        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+      },
+      className: `
+        !bg-green-50 dark:!bg-green-900/10
+        !text-green-800 dark:!text-green-200
+        !font-medium
+        !text-sm md:!text-base
+        !max-w-md
+      `,
+      duration: 3000,
+      icon: "🎉",
+    });
+
+    // Navigate to the product detail page
+    navigate(`/product/${product.id}`);
+  };
+
   return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +63,7 @@ export default function Products() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <div
               key={product.id}
               className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
@@ -57,7 +75,7 @@ export default function Products() {
                   className="w-full h-full object-contain group-hover:scale-105 transition duration-300"
                 />
                 <div className="absolute top-3 right-3 bg-white dark:bg-gray-800 px-2 py-1 rounded-full text-xs font-semibold text-green-600 dark:text-green-400">
-                  In Stock
+                  {product.inStock ? "In Stock" : "Out of Stock"}
                 </div>
               </div>
 
@@ -86,10 +104,13 @@ export default function Products() {
                       Price
                     </span>
                     <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                      ${product.price}
+                      ${product.price.toFixed(2)}
                     </span>
                   </div>
-                  <button className="flex items-center space-x-2 px-4 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                  <button
+                    className="flex items-center space-x-2 px-4 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                    onClick={() => addToCart(product)}
+                  >
                     <ShoppingCart className="h-5 w-5" />
                     <span>Add to Cart</span>
                   </button>

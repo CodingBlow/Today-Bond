@@ -7,7 +7,7 @@ export default function FeaturedProducts() {
   const filteredProducts = Array.from(
     new Map(
       products
-        .filter((product) => product.id >= 1 && product.id <= 6)
+        .filter((product) => product.id >= 7 && product.id <= 12)
         .map((item) => [item.id, item])
     ).values()
   );

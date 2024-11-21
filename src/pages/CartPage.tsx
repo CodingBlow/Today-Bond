@@ -146,18 +146,7 @@ export default function CartPage() {
             <span>Proceed to Checkout</span>
           </button>
 
-          {!isAuthenticated && (
-            <p className="mt-4 text-sm text-gray-500 dark:text-gray-400 text-center">
-              Please{" "}
-              <Link
-                to="/login"
-                className="text-blue-600 dark:text-blue-400 hover:opacity-90"
-              >
-                login
-              </Link>{" "}
-              to checkout
-            </p>
-          )}
+          
         </div>
       </div>
     </div>

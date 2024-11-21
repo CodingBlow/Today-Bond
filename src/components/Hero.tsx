@@ -3,6 +3,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa"; 
 
 const Hero = () => {
   const slides = [
@@ -27,17 +28,16 @@ const Hero = () => {
     <section className="relative bg-gradient-to-b from-neutral-900 to-neutral-800 py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          {/* Left Text Section */}
+          {/* Left Text and Social Media Section */}
           <div className="md:w-1/2 text-white text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight bg-gradient-to-r from-red-500 to-amber-500 text-transparent bg-clip-text">
               Innovative Adhesive Solutions
             </h1>
             <p className="text-lg md:text-xl text-neutral-300 mb-6 md:mb-10 leading-relaxed">
-              Experience unparalleled bonding performance with our cutting-edge
-              industrial adhesives, meticulously engineered for excellence.
+              Experience unparalleled bonding performance with our cutting-edge industrial adhesives, meticulously engineered for excellence.
             </p>
             <div className="space-y-4 mb-8">
-              {[
+              {[ 
                 "Superior molecular adhesion technology",
                 "Advanced rapid-cure formulation",
                 "Universal substrate compatibility",
@@ -58,7 +58,24 @@ const Hero = () => {
                 Shop Now
               </button>
             </Link>
+
+            {/* Social Media Links */}
+            <div className="flex justify-center md:justify-start gap-6 mt-8">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-600 transition-colors duration-300">
+                <FaFacebookF size={24} />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors duration-300">
+                <FaTwitter size={24} />
+              </a>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-600 transition-colors duration-300">
+                <FaInstagram size={24} />
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-700 transition-colors duration-300">
+                <FaLinkedinIn size={24} />
+              </a>
+            </div>
           </div>
+
           {/* Right Swiper Section */}
           <div className="md:w-1/2 w-full">
             <Swiper
