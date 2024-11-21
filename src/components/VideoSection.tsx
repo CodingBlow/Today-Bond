@@ -11,11 +11,11 @@ export default function VideoSection() {
             results
           </p>
         </div>
-        
+
         <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl mx-auto max-w-3xl">
           <iframe
             className="w-full h-full absolute inset-0"
-            src="https://youtu.be/G1XizCoSblg?si=olTMYF7qPfSqopbH"
+            src="https://youtu.be/G1XizCoSblg?si=29zeNnS34nptLi5q"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
