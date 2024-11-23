@@ -58,7 +58,7 @@ export default function ContactPage() {
                       Phone
                     </h3>
                     <a
-                      href="tel:+919389678954"
+                      href="tel:+919910829792"
                       className="text-gray-600 dark:text-gray-300 hover:underline"
                     >
                       +91 9910829792

@@ -84,10 +84,10 @@ export default function ShippingPolicy() {
             If the address cannot be updated through your account, please email
             us at:{" "}
             <a
-              href="mailto:customercare@todaybond.com"
+              href="mailto:todaybondproduct@gmail.com"
               className="text-blue-500 hover:underline"
             >
-              customercare@todaybond.com
+              todaybondproduct@gmail.com
             </a>
             .
           </p>
@@ -105,10 +105,10 @@ export default function ShippingPolicy() {
             If you have further questions or need assistance, please don’t
             hesitate to reach out to us at:{" "}
             <a
-              href="mailto:customercare@todaybond.com"
+              href="mailto:todaybondproduct@gmail.com"
               className="text-blue-500 hover:underline"
             >
-              customercare@todaybond.com
+              todaybondproduct@gmail.com
             </a>
             . We're here to help!
           </p>

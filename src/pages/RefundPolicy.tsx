@@ -14,7 +14,6 @@ export default function RefundPolicy() {
             <strong>15 days of delivery</strong>, provided it is unused and in
             its original packaging.
           </p>
-
           <h3 className="font-semibold text-lg mt-4">Key Points</h3>
           <ul className="list-disc list-inside space-y-2">
             <li>
@@ -44,7 +43,6 @@ export default function RefundPolicy() {
               damage.
             </li>
           </ul>
-
           <h3 className="font-semibold text-lg mt-4">
             Process for Returns & Exchanges
           </h3>
@@ -53,16 +51,16 @@ export default function RefundPolicy() {
               <strong>Contact Customer Service:</strong>
               <ul className="list-disc pl-6">
                 <li>
-                  Call us at <strong>+91-9389678954</strong> between{" "}
+                  Call us at <strong>+91-9910829792</strong> between{" "}
                   <strong>10:30 AM – 5:30 PM</strong>.
                 </li>
                 <li>
                   Email us at{" "}
                   <a
-                    href="mailto:customercare@todaybond.com"
+                    href="mailto:todaybondproduct@gmail.com"
                     className="text-blue-500 hover:underline"
                   >
-                    customercare@todaybond.com
+                    todaybondproduct@gmail.com
                   </a>
                   .
                 </li>
@@ -83,14 +81,14 @@ export default function RefundPolicy() {
               <strong>Address for Returns:</strong> Ensure the following address
               is clearly mentioned on the return parcel:
               <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg mt-2">
-                <p className="font-medium">Ecommerce Division</p>
+                {/* <p className="font-medium">Ecommerce Division</p> */}
                 <p>Today Bond</p>
-                <p>jaitpur , Delhi</p>
-                <p>Badarpur, Delhi 110044</p>
+                <p>C/10, G.F . DLF, Dilshad Extension 2,</p>
+                <p>Uttar Pradesh 201005 ( India)</p>
               </div>
             </li>
           </ol>
-
+          {/* C/10, G.F . DLF, Dilshad Extension 2, Uttar Pradesh 201005 ( India) */}
           <h3 className="font-semibold text-lg mt-4">Important Notes</h3>
           <ul className="list-disc list-inside space-y-2">
             <li>

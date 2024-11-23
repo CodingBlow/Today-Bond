@@ -70,14 +70,14 @@ export default function TermsandCon() {
           <p>
             <strong>Email:</strong>{" "}
             <a
-              href="mailto:customercare@todaybond.com"
+              href="mailto:todaybondproduct@gmail.com"
               className="text-blue-500 hover:underline"
             >
-              customercare@todaybond.com
+              todaybondproduct@gmail.com
             </a>
           </p>
           <p>
-            <strong>Phone:</strong> +91-9389678954
+            <strong>Phone:</strong> +919910829792
           </p>
         </div>
       </div>
