@@ -7,7 +7,7 @@ export default function HowToUse() {
   const navigate = useNavigate(); // Hook for navigation
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 py-12 px-4">
+    <div className="flex flex-col items-center justify-center bg-white dark:bg-gray-900 py-12 px-4">
       <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
         How to Use Today Bond Adhesive
       </h1>
