@@ -5,6 +5,8 @@ import Testimonials from '../components/Testimonials';
 import VideoSection from '../components/VideoSection';
 import FeaturedProducts from '../components/FearuredProducts';
 import HowToUse from '../components/HowtoUse';
+import Googlemap from '../components/Googlemap';
+
 // import FearuredProducts from '../components/FearuredProducts';
 
 export default function HomePage() {
@@ -17,6 +19,9 @@ export default function HomePage() {
       <HowToUse />
       <Products />
       <Testimonials />
+      <Googlemap />
+      <br />
+      <br />
     </>
   );
 }
