@@ -79,6 +79,15 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center text-gray-400">
+                <Phone className="h-5 w-5 mr-3 text-blue-500" />
+                <a
+                  href="tel:+919582976062"
+                  className="hover:text-white transition-colors duration-300"
+                >
+                  +91-9582976062
+                </a>
+              </li>
+              <li className="flex items-center text-gray-400">
                 <Mail className="h-5 w-5 mr-3 text-blue-500" />
                 <a
                   href="mailto:todaybondproduct@gmail.com"

@@ -87,7 +87,7 @@ const Payment = () => {
 
     try {
       if (paymentMethod === "cod") {
-        const orderId = await saveOrderToFirebase(); // Save order to Firebase with cartItems
+        const orderId = await saveOrderToFirebase();
         toast.success("Order confirmed! Get ready for your amazing products!", {
           style: {
             background: "#00FF00",
