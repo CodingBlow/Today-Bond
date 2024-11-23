@@ -3,7 +3,12 @@ import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa"; 
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
+
 
 const Hero = () => {
   const slides = [
@@ -34,10 +39,11 @@ const Hero = () => {
               Innovative Adhesive Solutions
             </h1>
             <p className="text-lg md:text-xl text-neutral-300 mb-6 md:mb-10 leading-relaxed">
-              Experience unparalleled bonding performance with our cutting-edge industrial adhesives, meticulously engineered for excellence.
+              Experience unparalleled bonding performance with our cutting-edge
+              industrial adhesives, meticulously engineered for excellence.
             </p>
             <div className="space-y-4 mb-8">
-              {[ 
+              {[
                 "Superior molecular adhesion technology",
                 "Advanced rapid-cure formulation",
                 "Universal substrate compatibility",
@@ -61,17 +67,32 @@ const Hero = () => {
 
             {/* Social Media Links */}
             <div className="flex justify-center md:justify-start gap-6 mt-8">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-600 transition-colors duration-300">
+              <a
+                href="https://facebook.com/todaybond"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-blue-600 transition-colors duration-300"
+              >
                 <FaFacebookF size={24} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors duration-300">
+              {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors duration-300">
                 <FaTwitter size={24} />
-              </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-600 transition-colors duration-300">
+              </a> */}
+              <a
+                href="https://instagram.com/todaybond"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-pink-600 transition-colors duration-300"
+              >
                 <FaInstagram size={24} />
               </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-700 transition-colors duration-300">
-                <FaLinkedinIn size={24} />
+              <a
+                href="https://youtube.com/@todaybond"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-blue-700 transition-colors duration-300"
+              >
+                <FaYoutube size={24} />
               </a>
             </div>
           </div>

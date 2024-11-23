@@ -6,6 +6,7 @@ import {
   MapPin,
   ExternalLink,
   Youtube,
+  FileText, // Added GST icon
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo-Today1.png";
@@ -63,25 +64,32 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-center text-gray-400">
                 <MapPin className="h-5 w-5 mr-3 text-blue-500" />
-                <span>Kalindi Kunj, Delhi, India 110044</span>
+                <span>
+                  C/10, G.F., DLF, Dilshad Extension 2, Uttar Pradesh 201005
+                  (India)
+                </span>
               </li>
               <li className="flex items-center text-gray-400">
                 <Phone className="h-5 w-5 mr-3 text-blue-500" />
                 <a
-                  href="tel:+919389678954"
+                  href="tel:+919910829792"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  +91 9389678954
+                  +91-9910829792
                 </a>
               </li>
               <li className="flex items-center text-gray-400">
                 <Mail className="h-5 w-5 mr-3 text-blue-500" />
                 <a
-                  href="mailto:info@todaybond.com"
+                  href="mailto:todaybondproduct@gmail.com"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  info@todaybond.com
+                  todaybondproduct@gmail.com
                 </a>
+              </li>
+              <li className="flex items-center text-gray-400">
+                <FileText className="h-5 w-5 mr-3 text-blue-500" />
+                <span>09LGDPK7641B1ZA</span>
               </li>
             </ul>
           </div>
@@ -128,7 +136,7 @@ export default function Footer() {
             <span>
               Developed by{" "}
               <a
-                href="https://zuridox.vercel.app/"
+                href="https://zuridox.com/"
                 className="text-blue-400 hover:text-blue-300 inline-flex items-center"
                 target="_blank"
                 rel="noopener noreferrer"

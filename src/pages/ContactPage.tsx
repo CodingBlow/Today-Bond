@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import toast from 'react-hot-toast';
+import React, { useState } from "react";
+import { Mail, Phone, MapPin, Send, FileText } from "lucide-react"; // Added FileText for GST icon
+import toast from "react-hot-toast";
 
 interface FormData {
   name: string;
@@ -11,21 +11,23 @@ interface FormData {
 
 export default function ContactPage() {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success('Message sent successfully! We\'ll get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    toast.success("Message sent successfully! We'll get back to you soon.");
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   return (
@@ -44,61 +46,81 @@ export default function ContactPage() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Get in Touch</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                Get in Touch
+              </h2>
               <div className="space-y-6">
+                {/* Phone */}
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Phone className="h-6 w-6 text-blue-600" />
-                  </div>
+                  <Phone className="h-6 w-6 text-blue-600" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">Phone</h3>
+                    <h3 className="font-semibold text-gray-900 dark:text-white">
+                      Phone
+                    </h3>
                     <a
                       href="tel:+919389678954"
                       className="text-gray-600 dark:text-gray-300 hover:underline"
                     >
-                      +91 9389678954
+                      +91 9910829792
                     </a>
-                    <p className="text-gray-600 dark:text-gray-300">Monday - Friday, 9am - 5pm EST</p>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      Monday - Friday, 9am - 5pm EST
+                    </p>
                   </div>
                 </div>
 
+                {/* Email */}
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Mail className="h-6 w-6 text-blue-600" />
-                  </div>
+                  <Mail className="h-6 w-6 text-blue-600" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">Email</h3>
+                    <h3 className="font-semibold text-gray-900 dark:text-white">
+                      Email
+                    </h3>
                     <a
-                      href="mailto:support@todaybond.com"
+                      href="mailto:todaybondproduct@gmail.com"
                       className="text-gray-600 dark:text-gray-300 hover:underline"
                     >
-                      support@todaybond.com
-                    </a>
-                    <br />
-                    <a
-                      href="mailto:sales@todaybond.com"
-                      className="text-gray-600 dark:text-gray-300 hover:underline"
-                    >
-                      sales@todaybond.com
+                      todaybondproduct@gmail.com
                     </a>
                   </div>
                 </div>
 
+                {/* GST Number */}
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-blue-600" />
-                  </div>
+                  <FileText className="h-6 w-6 text-blue-600" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">Address</h3>
-                    <p className="text-gray-600 dark:text-gray-300">Kalindi Kunj</p>
-                    <p className="text-gray-600 dark:text-gray-300">New Delhi, India 110044</p>
+                    <h3 className="font-semibold text-gray-900 dark:text-white">
+                      GST Number
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      09LGDPK7641B1ZA
+                    </p>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start space-x-4">
+                  <MapPin className="h-6 w-6 text-blue-600" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900 dark:text-white">
+                      Address
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      C/10, G.F . DLF, Dilshad Extension 2,
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      Uttar Pradesh 201005 ( India)
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* Business Hours */}
             <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Business Hours</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Business Hours
+              </h3>
               <div className="space-y-2 text-gray-600 dark:text-gray-300">
                 <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
                 <p>Saturday: 10:00 AM - 2:00 PM</p>
@@ -109,7 +131,9 @@ export default function ContactPage() {
 
           {/* Contact Form */}
           <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send Us a Message</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              Send Us a Message
+            </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label

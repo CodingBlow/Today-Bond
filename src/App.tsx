@@ -19,6 +19,7 @@ import ShippingPolicy from "./pages/ShippingPolicy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsandCon from "./pages/TermsandCon";
 import RefundPolicy from "./pages/RefundPolicy";
+import SafetyGuidelines from "./pages/Safetynote";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-and-conditions" element={<TermsandCon />} />
               <Route path="returns-and-refunds" element={<RefundPolicy />} />
+              <Route path="/safety-guidelines" element={<SafetyGuidelines />} />
             </Routes>
           </main>
           <Footer />

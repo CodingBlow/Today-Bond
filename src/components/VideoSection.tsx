@@ -30,7 +30,7 @@ export default function VideoSection() {
           <div className="relative aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-105 hover:shadow-[0_10px_40px_rgba(0,0,0,0.25)] transform-gpu">
             <iframe
               className="w-full h-full absolute inset-0"
-              src="https://www.youtube.com/embed/UMhoWw3jkP0?autoplay=1&mute=1"
+              src="https://www.youtube.com/embed/t5SnkJbBIJM?autoplay=1&mute=1"
               title="YouTube video player 2"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
