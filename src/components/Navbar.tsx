@@ -16,6 +16,14 @@ import { useAuthStore } from "../store/authStore";
 import { useThemeContext } from "../providers/ThemeProvider";
 import Logo from "../assets/Logo-Today1.png";
 
+// Navigation links array for reusability
+const NAV_LINKS = [
+  { name: "Home", path: "/" },
+  { name: "Shop", path: "/shop" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
+];
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -70,13 +78,13 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {["Home", "Shop", "About", "Contact"].map((item) => (
+            {NAV_LINKS.map((link) => (
               <Link
-                key={item}
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`} // Update Home link to '/'
+                key={link.name}
+                to={link.path}
                 className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-200 relative group"
               >
-                {item}
+                {link.name}
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
               </Link>
             ))}
@@ -177,14 +185,14 @@ export default function Navbar() {
           } overflow-hidden`}
         >
           <div className="py-4 space-y-4">
-            {["Home", "Shop", "About", "Contact"].map((item) => (
+            {NAV_LINKS.map((link) => (
               <Link
-                key={item}
-                to={`/${item.toLowerCase()}`}
+                key={link.name}
+                to={link.path}
                 className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {item}
+                {link.name}
               </Link>
             ))}
             <form
