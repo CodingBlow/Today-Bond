@@ -39,7 +39,7 @@ const Payment = () => {
       console.log(cartItems);
 
       // Prepare the order data, including the cartItems
-      const orderItems = cartItems.map((item) => ({
+      const orderItems = cartItems.map((item: { id: any; name: any; image: any; quantity: any; price: any; }) => ({
         id: item.id,
         name: item.name,
         image: item.image,
@@ -90,7 +90,7 @@ const Payment = () => {
         const orderId = await saveOrderToFirebase(); // Save order to Firebase with cartItems
         toast.success("Order confirmed! Get ready for your amazing products!", {
           style: {
-            background: "#1F2937",
+            background: "#00FF00",
             color: "#FFFFFF",
             padding: "16px",
             borderRadius: "12px",
@@ -114,7 +114,7 @@ const Payment = () => {
     } catch (error) {
       toast.error("Something went wrong. Please try again.", {
         style: {
-          background: "#1F2937",
+          background: "#00FF00",
           color: "#FFFFFF",
           padding: "16px",
           borderRadius: "12px",
@@ -137,7 +137,7 @@ const Payment = () => {
   };
 
   const initiateRazorpay = () => {
-    if (!window.Razorpay) {
+    if (typeof window === 'undefined') {
       toast.error("Razorpay is not loaded. Please try again later.");
       return;
     }
@@ -148,18 +148,8 @@ const Payment = () => {
       currency: "INR",
       name: "Your Store Name",
       description: "Purchase Payment",
-      handler: async (response: any) => {
+      handler: async () => {
         try {
-          const orderData = {
-            ...formData,
-            cartItems,
-            totalAmount,
-            paymentMethod: "online",
-            status: "paid",
-            razorpayPaymentId: response.razorpay_payment_id,
-            createdAt: new Date().toISOString(),
-            orderId: `ORD${Date.now()}`,
-          };
 
           const orderId = await saveOrderToFirebase(); // Save order to Firebase after payment
           toast.success("Payment successful!");
@@ -179,7 +169,7 @@ const Payment = () => {
       },
     };
 
-    const rzp = new window.Razorpay(options);
+    const rzp = new (window as any).Razorpay(options);
     rzp.open();
   };
 
