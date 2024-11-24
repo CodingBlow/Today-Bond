@@ -22,6 +22,7 @@ const NAV_LINKS = [
   { name: "Shop", path: "/shop" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
+  { name: "How to Use", path: "/HOW-TO-USE" },
 ];
 
 export default function Navbar() {

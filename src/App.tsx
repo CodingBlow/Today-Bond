@@ -20,6 +20,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsandCon from "./pages/TermsandCon";
 import RefundPolicy from "./pages/RefundPolicy";
 import SafetyGuidelines from "./pages/Safetynote";
+import HowtoUse from "./pages/HowToUse";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
               <Route path="payment" element={<Payment />} />
               <Route path="/admin-login" element={<AdminLogin />} />
               <Route path="/admin/dashboard" element={<AdminDashboard />} />
+              <Route path="/HOW-TO-USE" element={<HowtoUse />} />
               <Route
                 path="/shipping-and-delivery"
                 element={<ShippingPolicy />}

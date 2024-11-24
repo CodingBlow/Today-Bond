@@ -64,7 +64,7 @@ export default function ContactPage() {
                       +91 9910829792
                     </a>
                     <p className="text-gray-600 dark:text-gray-300">
-                      Monday - Friday, 9am - 5pm EST
+                      Monday -Saturday, 9am - 7pm EST
                     </p>
                   </div>
                 </div>
@@ -122,8 +122,7 @@ export default function ContactPage() {
                 Business Hours
               </h3>
               <div className="space-y-2 text-gray-600 dark:text-gray-300">
-                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                <p>Saturday: 10:00 AM - 2:00 PM</p>
+                <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
                 <p>Sunday: Closed</p>
               </div>
             </div>
