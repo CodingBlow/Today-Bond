@@ -88,7 +88,7 @@ export default function ProductPage() {
 
         {/* Product Details */}
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl font-bold text-gray-900 mb-4 dark:text-blue-600">
             {product.name}
           </h1>
           <div className="flex items-center space-x-4 mb-6">
