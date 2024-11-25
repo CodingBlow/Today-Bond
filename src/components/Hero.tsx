@@ -8,22 +8,24 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
-
+import banner1 from "../assets/1st HeroBanner.png";
+import banner2 from "../assets/2nd HeroBanner2.png";
 
 const Hero = () => {
   const slides = [
     {
-      image: "https://images.pexels.com/photos/1999263/pexels-photo-1999263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image:banner1,
       title: "Premium Grade Adhesives",
       description: "Engineered for superior bonding performance",
     },
     {
-      image: "https://images.pexels.com/photos/326080/pexels-photo-326080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image:banner2,
       title: "Multi-Surface Solutions",
       description: "Advanced formulations for diverse applications",
     },
     {
-      image: "https://images.pexels.com/photos/356844/pexels-photo-356844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image:
+        "https://images.pexels.com/photos/356844/pexels-photo-356844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       title: "Rapid-Set Technology",
       description: "Optimized for maximum efficiency",
     },
