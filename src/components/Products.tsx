@@ -16,15 +16,15 @@ interface Product {
 }
 
 export default function Products() {
-  const [cart, setCart] = useState<Product[]>([]); // Set the type to Product[]
-  const navigate = useNavigate(); // Hook to navigate to a different route
+  const [cart, setCart] = useState<Product[]>([]);
+  const navigate = useNavigate();
 
   // Filter products by unique IDs within the range of 1 to 6
   const filteredProducts = products.filter(
     (product) => product.id >= 1 && product.id <= 6
   );
 
-  // Handle adding products to the cart and navigating to the product page
+  // Handle adding products to the cart
   const addToCart = (product: Product) => {
     setCart((prevCart) => [...prevCart, product]);
     toast.success("Added to cart", {
@@ -35,19 +35,15 @@ export default function Products() {
         borderRadius: "12px",
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
       },
-      className: `
-        !bg-green-50 dark:!bg-green-900/10
-        !text-green-800 dark:!text-green-200
-        !font-medium
-        !text-sm md:!text-base
-        !max-w-md
-      `,
       duration: 3000,
       icon: "🎉",
     });
-
-    // Navigate to the product detail page
     navigate(`/product/${product.id}`);
+  };
+
+  // Navigate to the product detail page
+  const viewProduct = (id: number) => {
+    navigate(`/product/${id}`);
   };
 
   return (
@@ -68,7 +64,11 @@ export default function Products() {
               key={product.id}
               className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
             >
-              <div className="relative aspect-square overflow-hidden bg-gray-100 dark:bg-gray-700 p-3">
+              {/* Clickable Image */}
+              <div
+                className="relative aspect-square overflow-hidden bg-gray-100 dark:bg-gray-700 p-3 cursor-pointer"
+                onClick={() => viewProduct(product.id)}
+              >
                 <img
                   src={product.image}
                   alt={product.name}
@@ -79,6 +79,7 @@ export default function Products() {
                 </div>
               </div>
 
+              {/* Product Info */}
               <div className="p-4">
                 <div className="flex items-center mb-1">
                   <div className="flex items-center text-yellow-400">
@@ -91,7 +92,10 @@ export default function Products() {
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
+                <h3
+                  className="text-lg font-bold text-gray-900 dark:text-white mb-1 cursor-pointer hover:underline"
+                  onClick={() => viewProduct(product.id)}
+                >
                   {product.name}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-3 text-sm">
@@ -104,9 +108,10 @@ export default function Products() {
                       Price
                     </span>
                     <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                      ${product.price.toFixed(2)}
+                      ₹{product.price.toFixed(2)}
                     </span>
                   </div>
+                  {/* Add to Cart */}
                   <button
                     className="flex items-center space-x-2 px-4 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"
                     onClick={() => addToCart(product)}

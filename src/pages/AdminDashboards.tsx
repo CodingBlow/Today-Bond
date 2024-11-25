@@ -53,7 +53,7 @@ export default function AdminDashboard() {
   }, [navigate]);
 
   const updateStatus = (bookingId: string, newStatus: string) => {
-    const bookingRef = ref(database, `booking/${bookingId}`);
+    const bookingRef = ref(database, `booking/₹{bookingId}`);
     update(bookingRef, { status: newStatus }).catch((error) => {
       console.error('Error updating status:', error);
     });
@@ -174,7 +174,7 @@ export default function AdminDashboard() {
                                 {item.name}
                               </p>
                               <p className="text-sm text-gray-500">
-                                {item.quantity} x ${item.price}
+                                {item.quantity} x ₹{item.price}
                               </p>
                             </div>
                           </div>
@@ -188,7 +188,7 @@ export default function AdminDashboard() {
                           Total Amount
                         </span>
                         <span className="text-xl font-bold text-blue-600">
-                          ${booking.totalAmount.toFixed(2)}
+                          ₹{booking.totalAmount.toFixed(2)}
                         </span>
                       </div>
                     </div>

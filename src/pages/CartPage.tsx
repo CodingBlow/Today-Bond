@@ -76,10 +76,10 @@ export default function CartPage() {
                   {item.name}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  ${item.price}
+                  ₹{item.price}
                 </p>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Subtotal: ${(item.price * item.quantity).toFixed(2)}
+                  Subtotal: ₹{(item.price * item.quantity).toFixed(2)}
                 </p>
               </div>
               <div className="flex items-center space-x-2">
@@ -116,25 +116,25 @@ export default function CartPage() {
           <div className="space-y-3 mb-6">
             <div className="flex justify-between text-gray-600 dark:text-gray-300">
               <span>Subtotal</span>
-              <span>${subtotal.toFixed(2)}</span>
+              <span>₹{subtotal.toFixed(2)}</span>
             </div>
             <div className="flex justify-between text-gray-600 dark:text-gray-300">
               <span>Shipping</span>
-              <span>{shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}</span>
+              <span>{shipping === 0 ? "Free" : `₹${shipping.toFixed(2)}`}</span>
             </div>
             <div className="flex justify-between text-gray-600 dark:text-gray-300">
               <span>Tax (8%)</span>
-              <span>${tax.toFixed(2)}</span>
+              <span>₹{tax.toFixed(2)}</span>
             </div>
             <div className="border-t dark:border-gray-700 pt-3 font-semibold flex justify-between text-gray-900 dark:text-white">
               <span>Total</span>
-              <span>${finalTotal.toFixed(2)}</span>
+              <span>₹{finalTotal.toFixed(2)}</span>
             </div>
           </div>
 
           {shipping > 0 && (
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-              Free shipping on orders over $50!
+              Free shipping on orders over ₹50!
             </p>
           )}
 

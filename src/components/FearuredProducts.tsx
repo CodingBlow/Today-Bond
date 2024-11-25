@@ -70,7 +70,7 @@ export default function FeaturedProducts() {
 
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                    ${product.price.toFixed(2)}
+                  ₹{product.price.toFixed(2)}
                   </span>
                   <button
                     className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"

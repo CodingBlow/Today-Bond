@@ -55,7 +55,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <p className="text-gray-600 mb-4">{product.description}</p>
         <div className="flex items-center justify-between">
           <span className="text-2xl font-bold text-blue-600">
-            ${product.price}
+          ₹{product.price}
           </span>
           <button
             onClick={handleAddToCart}

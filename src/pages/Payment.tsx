@@ -206,7 +206,7 @@ const Payment = () => {
                         Qty: {item.quantity}
                       </p>
                       <p className="text-sm font-medium text-gray-900 dark:text-white">
-                        ${(item.price * item.quantity).toFixed(2)}
+                      ₹{(item.price * item.quantity).toFixed(2)}
                       </p>
                     </div>
                   </div>
@@ -218,7 +218,7 @@ const Payment = () => {
                     Total:
                   </span>
                   <span className="text-xl font-bold text-blue-600 dark:text-blue-400">
-                    ${totalAmount.toFixed(2)}
+                  ₹{totalAmount.toFixed(2)}
                   </span>
                 </div>
               </div>

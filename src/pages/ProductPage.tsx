@@ -93,7 +93,7 @@ export default function ProductPage() {
           </h1>
           <div className="flex items-center space-x-4 mb-6">
             <span className="text-3xl font-bold text-blue-600">
-              ${product.price}
+            ₹{product.price}
             </span>
             <span
               className={`px-3 py-1 rounded-full text-sm ${
