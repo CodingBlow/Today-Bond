@@ -44,7 +44,6 @@ export default function Footer() {
                 { name: "Returns & Refunds", path: "/returns-and-refunds" },
                 { name: "Shipping & Delivery", path: "/shipping-and-delivery" },
                 { name: "Admin Login", path: "/admin-login" },
-                { name: "How To Use", path: "/HOW-TO-USE" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link

@@ -52,7 +52,7 @@ export default function RefundPolicy() {
               <ul className="list-disc pl-6">
                 <li>
                   Call us at <strong>+91-9910829792</strong> between{" "}
-                  <strong>10:30 AM – 5:30 PM</strong>.
+                  <strong>09:00 AM – 7:00 PM</strong>.
                 </li>
                 <li>
                   Email us at{" "}
