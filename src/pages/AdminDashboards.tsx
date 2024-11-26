@@ -124,7 +124,7 @@ export default function AdminDashboard() {
                 : "bg-gray-200"
             }`}
           >
-            Pending
+            New
           </button>
           <button
             onClick={() => setSelectedStatus("in-transit")}
@@ -187,7 +187,7 @@ export default function AdminDashboard() {
                     onChange={(e) => updateStatus(bookingId, e.target.value)}
                     className={`px-3 py-1 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white`}
                   >
-                    <option value="pending">Pending</option>
+                    <option value="new">New</option>
                     <option value="in-transit">In Transit</option>
                     <option value="completed">Completed</option>
                     <option value="not-delivered">Not Delivered</option>
@@ -247,7 +247,7 @@ export default function AdminDashboard() {
                       <div>
                         <p className="text-sm text-gray-500">Order Date</p>
                         <p className="font-medium text-gray-900 dark:text-white">
-                          {new Date(booking.createdAt).toLocaleDateString()}
+                          {new Date(booking.createdAt).toLocaleString()}
                         </p>
                       </div>
                     </div>
@@ -289,7 +289,7 @@ export default function AdminDashboard() {
                           Total Amount
                         </span>
                         <span className="text-xl font-bold text-blue-600">
-                          ${booking.totalAmount.toFixed(2)}
+                          ₹{booking.totalAmount.toFixed(2)}
                         </span>
                       </div>
                     </div>
