@@ -100,7 +100,7 @@ export default function AdminDashboard() {
         <div className="flex flex-wrap gap-2 sm:gap-4 mb-8">
           {[
             "all",
-            "pending",
+            "New",
             "in-transit",
             "completed",
             "not-delivered",
@@ -140,7 +140,7 @@ export default function AdminDashboard() {
                     onChange={(e) => updateStatus(bookingId, e.target.value)}
                     className="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200 border border-gray-300 dark:border-gray-600 focus:ring focus:ring-blue-500 focus:outline-none"
                   >
-                    <option value="pending">Pending</option>
+                    <option value="New">New</option>
                     <option value="in-transit">In Transit</option>
                     <option value="completed">Completed</option>
                     <option value="not-delivered">Not Delivered</option>
