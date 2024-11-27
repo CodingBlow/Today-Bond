@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import banner1 from "../assets/1st HeroBanner.png";
 import banner2 from "../assets/2nd HeroBanner2.png";
+import banner3 from "../assets/Herobannershort3.jpg";
 
 const Hero = () => {
   const slides = [
@@ -24,8 +25,7 @@ const Hero = () => {
       description: "Advanced formulations for diverse applications",
     },
     {
-      image:
-        "https://images.pexels.com/photos/356844/pexels-photo-356844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image:banner3,
       title: "Rapid-Set Technology",
       description: "Optimized for maximum efficiency",
     },
@@ -38,7 +38,7 @@ const Hero = () => {
           {/* Left Text and Social Media Section */}
           <div className="md:w-1/2 text-white text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight bg-gradient-to-r from-red-500 to-amber-500 text-transparent bg-clip-text">
-              Innovative Adhesive Solutions
+              About Today Bond
             </h1>
             <p className="text-lg md:text-xl text-neutral-300 mb-6 md:mb-10 leading-relaxed">
               Experience unparalleled bonding performance with our cutting-edge

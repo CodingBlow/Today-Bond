@@ -1,5 +1,7 @@
 import { Award, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import Hero from "../components/Hero";
+import aboutimage from "../assets/aboutImage.jpg"
 
 const values = [
   {
@@ -24,16 +26,17 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <div className="py-24 bg-white dark:bg-gray-900 transition-colors duration-200">
+    <div className="py-15 bg-white dark:bg-gray-900 transition-colors duration-200">
+      <Hero />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          {/* <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             About Today Bond
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          </h1> */}
+          {/* <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Leading the industry in innovative adhesive solutions since 1970
-          </p>
+          </p> */}
         </div>
 
         {/* Story Section */}
@@ -63,7 +66,7 @@ export default function AboutPage() {
           </div>
           <div className="relative h-96">
             <img
-              src="https://images.pexels.com/photos/1999263/pexels-photo-1999263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+              src={aboutimage}
               alt="Today Bond Laboratory"
               className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg"
             />
