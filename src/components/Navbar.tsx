@@ -19,8 +19,8 @@ import Logo from "../assets/Logo-Today1.png";
 // Navigation links array for reusability
 const NAV_LINKS = [
   { name: "Home", path: "/" },
-  { name: "Shop", path: "/shop" },
   { name: "About", path: "/about" },
+  { name: "Shop", path: "/shop" },
   { name: "Contact", path: "/contact" },
   { name: "How to Use", path: "/HOW-TO-USE" },
 ];

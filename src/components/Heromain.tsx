@@ -7,7 +7,7 @@ import banner2Desktop from "../assets/slider/2.jpg";
 import banner3Desktop from "../assets/slider/1.jpg";
 import banner1Mobile from "../assets/slider/3.jpg";
 import banner2Mobile from "../assets/slider/2.jpg";
-import banner3Mobile from "../assets/slider/1.jpg";
+import banner3Mobile from "../assets/slider/1a.jpg";
 
 const Hero = () => {
   // Desktop slides
@@ -25,7 +25,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="w-screen overflow-hidden relative">
+    <section className="w-screen overflow-hidden relative bg-black">
       {/* Desktop Slider */}
       <div className="hidden md:block w-full h-full">
         <Swiper
@@ -43,7 +43,7 @@ const Hero = () => {
           className="w-full"
         >
           {desktopSlides.map((slide, index) => (
-            <SwiperSlide key={index} className="w-full relative">
+            <SwiperSlide key={index} className="w-full relative bg-black">
               <div className="w-full h-[500px] lg:h-[600px]">
                 <img
                   src={slide.image}
@@ -57,7 +57,7 @@ const Hero = () => {
       </div>
 
       {/* Mobile Slider */}
-      <div className="block md:hidden w-80% h-90%">
+      <div className="block md:hidden w-80% h-90% bg-black">
         <Swiper
           autoplay={{
             delay: 3000,
@@ -73,7 +73,7 @@ const Hero = () => {
           className="w-full"
         >
           {mobileSlides.map((slide, index) => (
-            <SwiperSlide key={index} className="w-full relative">
+            <SwiperSlide key={index} className="w-full relative bg-black">
               <div className="w-full h-48 sm:h-64">
                 <img
                   src={slide.image}

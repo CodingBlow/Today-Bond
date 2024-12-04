@@ -1,6 +1,6 @@
-import step1 from "../assets/step1.jpg";
-import step2 from "../assets/step2.jpg";
-import step3 from "../assets/step3.jpg";
+import step1 from "../assets/step1a.jpg";
+import step2 from "../assets/step2a.jpg";
+import step3 from "../assets/step3a.jpg";
 import { useNavigate } from "react-router-dom"; // Import for navigation
 
 export default function HowToUse() {
