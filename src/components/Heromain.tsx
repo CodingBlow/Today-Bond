@@ -2,12 +2,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import banner1Desktop from "../assets/1stHeroBannerDesktop.png";
-import banner2Desktop from "../assets/1stHeroBannerDesktop.png";
-import banner3Desktop from "../assets/1stHeroBannerDesktop.png";
-import banner1Mobile from "../assets/1stHeroBannerDesktop.png";
-import banner2Mobile from "../assets/1stHeroBannerMobile.png";
-import banner3Mobile from "../assets/1stHeroBannerMobile.png";
+import banner1Desktop from "../assets/slider/3.jpg";
+import banner2Desktop from "../assets/slider/2.jpg";
+import banner3Desktop from "../assets/slider/1.jpg";
+import banner1Mobile from "../assets/slider/3.jpg";
+import banner2Mobile from "../assets/slider/2.jpg";
+import banner3Mobile from "../assets/slider/1.jpg";
 
 const Hero = () => {
   // Desktop slides
