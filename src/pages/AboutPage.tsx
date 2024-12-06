@@ -68,7 +68,7 @@ export default function AboutPage() {
             <img
               src={aboutimage}
               alt="Today Bond Laboratory"
-              className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg"
+              className="absolute inset-0 w-full h-full object-fit rounded-lg shadow-lg"
             />
           </div>
         </div>
