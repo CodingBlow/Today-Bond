@@ -176,7 +176,7 @@ const Payment = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r text-yellow-500 bg-clip-text text-transparent">
           Complete Your Purchase
         </h2>
 
@@ -310,7 +310,7 @@ const Payment = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-xl shadow-lg hover:from-blue-600 hover:to-indigo-600 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 font-medium text-lg"
+              className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-white py-3 rounded-md hover:opacity-90 transition duration-200 flex items-center justify-center space-x-2"
             >
               {isLoading ? (
                 <span className="flex items-center justify-center">

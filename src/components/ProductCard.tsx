@@ -21,13 +21,11 @@ export default function ProductCard({ product }: ProductCardProps) {
         padding: "16px",
         borderRadius: "8px",
       },
-      className: `
-        !bg-white dark:!bg-gray-800 
+      className: `!bg-white dark:!bg-gray-800 
         !text-gray-900 dark:!text-white 
         sm:!w-auto md:!max-w-md 
         !text-sm md:!text-base
-        !font-medium
-      `,
+        !font-medium`,
       duration: 2000,
       position: window.innerWidth <= 768 ? "bottom-center" : "top-right",
       icon: "🛍️",
@@ -35,20 +33,20 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <div className="group bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition w-84">
+    <div className="group bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition w-full max-w-full">
       <Link to={`/product/${product.id}`} className="block">
-        <div className="relative h-60 overflow-hidden bg-white">
+        <div className="relative h-44 sm:h-48 md:h-60 overflow-hidden bg-white">
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
           />
         </div>
       </Link>
 
       <div className="p-4">
         <Link to={`/product/${product.id}`}>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 hover:text-blue-600 transition">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 hover:text-yellow-500 transition">
             {product.name}
           </h3>
         </Link>
@@ -56,12 +54,12 @@ export default function ProductCard({ product }: ProductCardProps) {
           {product.description}
         </p>
         <div className="flex items-center justify-between">
-          <span className="text-xl font-bold text-blue-600">
+          <span className="text-xl font-bold text-yellow-500">
             ₹{product.price}
           </span>
           <button
             onClick={handleAddToCart}
-            className="flex items-center space-x-1 bg-blue-600 text-white px-3 py-1 rounded-full hover:bg-blue-700 transition text-sm"
+            className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-3 py-1 rounded-full hover:bg-yellow-500 transition text-sm"
           >
             <ShoppingCart className="h-4 w-4" />
             <span>Add</span>

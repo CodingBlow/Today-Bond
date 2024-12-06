@@ -1,7 +1,7 @@
 import { Star, Quote } from "lucide-react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
-import 'swiper/css';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 const testimonials = [
   {
@@ -38,75 +38,83 @@ const testimonials = [
     content:
       "I rely on Today Bond for my construction projects. The adhesion is phenomenal and consistent.",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/men/69.jpg",
+    image:
+      "https://img.freepik.com/free-photo/indian-man-city-male-traditional-turban-hinduist-summer-city_1157-41030.jpg?t=st=1733499334~exp=1733502934~hmac=74f2da97f4d52bb436711eae2322c0efd79a1ea17f797689ee09f0730b35c201&w=360",
   },
 ];
 
 export default function Testimonials() {
   return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-200">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl font-bold mb-3 bg-gradient-to-r text-yellow-500 bg-clip-text text-transparent">
             Customer Success Stories
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-xl mx-auto text-sm">
+          <p className="text-gray-600 dark:text-gray-300 max-w-xl mx-auto text-sm sm:text-base">
             Discover why professionals and enthusiasts trust our products
           </p>
         </div>
 
-        {/* Swiper for Automatic Sliding */}
         <Swiper
           modules={[Autoplay]}
           spaceBetween={20}
-          slidesPerView={2} // Show 2 testimonials at once
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
           }}
           loop={true}
-          centeredSlides={true}
           className="swiper-container"
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700 max-w-md mx-auto">
-                <div className="relative">
-                  <Quote className="absolute top-0 left-0 h-6 w-6 text-blue-100 dark:text-blue-900 -translate-x-2 -translate-y-2" />
-                  <div className="flex items-center mb-4">
-                    <div className="relative">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        className="w-12 h-12 rounded-full object-cover border-2 border-blue-500"
-                      />
-                      <div className="absolute -bottom-1 -right-1 bg-white dark:bg-gray-800 rounded-full p-0.5 shadow-lg">
-                        <div className="bg-green-500 w-2.5 h-2.5 rounded-full"></div>
-                      </div>
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-sm font-bold text-gray-900 dark:text-white">{testimonial.name}</p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">{testimonial.role}</p>
-                    </div>
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700 max-w-md mx-auto">
+                <div className="flex items-center mb-4">
+                  <div className="relative w-16 h-16">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-full h-full rounded-full object-cover border-2 border-blue-500"
+                    />
+                  </div>
+                  <div className="ml-4">
+                    <p className="text-sm font-semibold text-gray-900 dark:text-white">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">
+                      {testimonial.role}
+                    </p>
                   </div>
                 </div>
 
-                <div className="flex mb-3">
+                <div className="flex items-center mb-3">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className={`h-4 w-4 ${i < testimonial.rating ? "text-yellow-400" : "text-gray-200 dark:text-gray-700"}`}
+                      className={`h-5 w-5 ${
+                        i < testimonial.rating
+                          ? "text-yellow-400"
+                          : "text-gray-300 dark:text-gray-700"
+                      }`}
                       fill="currentColor"
                     />
                   ))}
                 </div>
 
-                <blockquote className="text-xs text-gray-600 dark:text-gray-300 mb-4 italic">
+                <blockquote className="text-sm text-gray-600 dark:text-gray-300 mb-4 italic leading-relaxed">
                   "{testimonial.content}"
                 </blockquote>
 
-                <div className="pt-2 border-t border-gray-100 dark:border-gray-700">
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Verified Customer</p>
+                <div className="text-right">
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    Verified Customer
+                  </p>
                 </div>
               </div>
             </SwiperSlide>

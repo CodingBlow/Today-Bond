@@ -1,162 +1,157 @@
-import {
-  Facebook,
-  Instagram,
-  Mail,
-  Phone,
-  MapPin,
-  ExternalLink,
-  Youtube,
-  FileText, // Added GST icon
-} from "lucide-react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo-Today1.png";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
+import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
+import logo from "../assets/Logo-Today1.png";
+import img1 from "../assets/Product_images/img1.jpg";
+import img2 from "../assets/Product_images/img1.jpg";
+import img3 from "../assets/Product_images/img1.jpg";
+import img4 from "../assets/Product_images/img1.jpg";
 
-export default function Footer() {
+const Footer: React.FC = () => {
+  const socialLinks = [
+    { icon: <FaFacebookF />, url: "#", label: "Facebook" },
+    { icon: <FaInstagram />, url: "#", label: "Instagram" },
+    { icon: <FaLinkedinIn />, url: "#", label: "LinkedIn" },
+    { icon: <FaYoutube />, url: "#", label: "YouTube" },
+  ];
+
+  const companyLinks = [
+    { name: "Privacy Policy", url: "/privacy-policy" },
+    { name: "Terms & Conditions", url: "/terms-and-conditions" },
+    { name: "Returns & Refunds", url: "/returns-and-refunds" },
+    { name: "Shipping & Delivery", url: "/shipping-and-delivery" },
+    { name: "Admin Login", url: "/admin-login" },
+    { name: "GST Number", text: "09LGDPK7641B1ZA" }
+  ];
+
+  const instagramImages = [img1, img2, img3, img4];
+
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-4 gap-12">
-          {/* Brand Column */}
-          <div className="space-y-6">
-            <div className="flex-shrink-0">
-              <Link to="/">
-                <img
-                  src={Logo}
-                  alt="Today Bond Logo"
-                  className="h-20 w-25 hover:opacity-90 transition-opacity"
-                />
-              </Link>
-            </div>
-            <p className="text-sm leading-relaxed text-gray-400">
-              We offer the fastest bonding agent available on the market,
-              designed to save you time and money while enabling you to achieve
-              superior results more efficiently.
-            </p>
-          </div>
-
-          {/* Quick Links */}
+    <footer className="bg-gradient-to-b from-blue-900 to-blue-950 text-gray-100">
+      <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
           <div>
-            <h4 className="text-white font-bold mb-6 text-lg">Quick Links</h4>
-            <ul className="space-y-3">
-              {[
-                { name: "Privacy Policy", path: "/privacy-policy" },
-                { name: "Terms & Conditions", path: "/terms-and-conditions" },
-                { name: "Returns & Refunds", path: "/returns-and-refunds" },
-                { name: "Shipping & Delivery", path: "/shipping-and-delivery" },
-                { name: "Admin Login", path: "/admin-login" },
-              ].map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
-                  >
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {link.name}
-                  </Link>
-                </li>
+            <img src={logo} alt="Company Logo" className="w-40 mb-4" />
+            <div className="mt-6 flex space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.url}
+                  className="text-white hover:text-yellow-400 transition-colors"
+                  aria-label={social.label}
+                >
+                  <span className="text-xl">{social.icon}</span>
+                </a>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white font-bold mb-6 text-lg">Contact Us</h4>
-            <ul className="space-y-4">
-              <li className="flex items-center text-gray-400">
-                <MapPin className="h-5 w-5 mr-3 text-blue-500" />
+            <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
+            <ul className="space-y-3 text-sm text-gray-300">
+              <li className="flex items-start space-x-3">
+                <HiLocationMarker className="mt-1 flex-shrink-0 text-yellow-400" />
                 <span>
                   C/10, G.F., DLF, Dilshad Extension 2, Uttar Pradesh 201005
                   (India)
                 </span>
               </li>
-              <li className="flex items-center text-gray-400">
-                <Phone className="h-5 w-5 mr-3 text-blue-500" />
+              <li className="flex items-center space-x-3">
+                <HiPhone className="flex-shrink-0 text-yellow-400" />
                 <a
                   href="tel:+919910829792"
-                  className="hover:text-white transition-colors duration-300"
+                  className="hover:text-white transition-colors"
                 >
-                  +91-9910829792
+                  +91-9910829792, 1-9582976062
                 </a>
               </li>
-              <li className="flex items-center text-gray-400">
-                <Phone className="h-5 w-5 mr-3 text-blue-500" />
-                <a
-                  href="tel:+919582976062"
-                  className="hover:text-white transition-colors duration-300"
-                >
-                  +91-9582976062
-                </a>
-              </li>
-              <li className="flex items-center text-gray-400">
-                <Mail className="h-5 w-5 mr-3 text-blue-500" />
+              <li className="flex items-center space-x-3">
+                <HiMail className="flex-shrink-0 text-yellow-400" />
                 <a
                   href="mailto:todaybondproduct@gmail.com"
-                  className="hover:text-white transition-colors duration-300"
+                  className="hover:text-white transition-colors"
                 >
                   todaybondproduct@gmail.com
                 </a>
               </li>
-              <li className="flex items-center text-gray-400">
-                <FileText className="h-5 w-5 mr-3 text-blue-500" />
-                <span>09LGDPK7641B1ZA</span>
-              </li>
             </ul>
           </div>
 
-          {/* Social Media */}
+          {/* Company Links */}
           <div>
-            <h4 className="text-white font-bold mb-6 text-lg">
-              Connect With Us
-            </h4>
-            <div className="flex space-x-4">
-              <a
-                href="https://facebook.com/todaybond"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-800 p-3 rounded-full hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="https://instagram.com/todaybond"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-800 p-3 rounded-full hover:bg-pink-600 transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="https://youtube.com/@todaybond"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-800 p-3 rounded-full hover:bg-blue-400 transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <Youtube className="h-5 w-5" />
-              </a>
+            <h3 className="text-lg font-semibold text-white mb-4">Company Info</h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              {companyLinks.map((link, index) => (
+                <li key={index} className="flex items-center space-x-3">
+                  {link.url ? (
+                    <Link
+                      to={link.url}
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <span>{link.text}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Instagram Section */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Follow Us on Instagram
+            </h3>
+            <div className="grid grid-cols-2 gap-2">
+              {instagramImages.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Instagram ${index + 1}`}
+                  className="w-full h-24 object-cover rounded-md hover:opacity-90 transition-opacity"
+                />
+              ))}
             </div>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mt-4 text-center bg-yellow-400 text-white hover:bg-white hover:text-yellow-400 font-medium transition-colors py-2 px-6 rounded"
+            >
+              Visit our Instagram
+            </a>
           </div>
         </div>
 
-        {/* Footer Bottom */}
-        <div className="border-t border-gray-800 mt-12 pt-8 text-sm text-center">
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-2 text-gray-400">
-            <span>© 2024 Today Bond. All Rights Reserved.</span>
-            <span className="hidden md:inline">|</span>
-            <span>
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-blue-800">
+          <div className="text-center text-sm text-gray-400">
+            <p>© {new Date().getFullYear()} Today Bond. All rights reserved.</p>
+            <p>
               Developed by{" "}
               <a
                 href="https://zuridox.com/"
-                className="text-blue-400 hover:text-blue-300 inline-flex items-center"
+                className="text-blue-400 hover:text-blue-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Zuridox
-                <ExternalLink className="h-4 w-4 ml-1" />
               </a>
-            </span>
+            </p>
           </div>
         </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

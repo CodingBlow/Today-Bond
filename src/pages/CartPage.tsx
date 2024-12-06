@@ -45,7 +45,7 @@ export default function CartPage() {
           </p>
           <Link
             to="/shop"
-            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:opacity-90 transition duration-200"
+            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-yellow-500 to-yellow-600 hover:opacity-90 transition duration-200"
           >
             Continue Shopping
           </Link>
@@ -56,7 +56,7 @@ export default function CartPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-white dark:bg-gray-900">
-      <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+      <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
         Shopping Cart
       </h2>
       <div className="grid md:grid-cols-3 gap-8">
@@ -140,13 +140,11 @@ export default function CartPage() {
 
           <button
             onClick={handleCheckout}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-md hover:opacity-90 transition duration-200 flex items-center justify-center space-x-2"
+            className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-white py-3 rounded-md hover:opacity-90 transition duration-200 flex items-center justify-center space-x-2"
           >
             <CreditCard className="h-5 w-5" />
             <span>Proceed to Checkout</span>
           </button>
-
-          
         </div>
       </div>
     </div>

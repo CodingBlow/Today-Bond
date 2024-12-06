@@ -3,7 +3,7 @@ export default function VideoSection() {
     <section className="py-28 bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r text-yellow-500 bg-clip-text text-transparent">
             See Today Bond in Action
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
