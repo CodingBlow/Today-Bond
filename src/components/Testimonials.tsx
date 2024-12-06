@@ -8,34 +8,38 @@ const testimonials = [
     id: 1,
     name: "Sunil Kumar",
     role: "DIY Enthusiast",
-    content: "Today Bond has been a game-changer for my craft projects. The strength and reliability are unmatched!",
+    content:
+      "Today Bond has been a game-changer for my craft projects. The strength and reliability are unmatched!",
     rating: 4,
-    image: "https://randomuser.me/api/portraits/men/1.jpg"
+    image: "https://randomuser.me/api/portraits/men/56.jpg",
   },
   {
     id: 2,
     name: "Ajay Sharma",
     role: "Professional Carpenter",
-    content: "Today Bond has been a game-changer for my craft projects. The strength and reliability are unmatched!",
+    content:
+      "Today Bond has been a game-changer for my craft projects. The strength and reliability are unmatched!",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/men/2.jpg"
+    image: "https://randomuser.me/api/portraits/men/45.jpg",
   },
   {
     id: 3,
     name: "Priya Patel",
     role: "Interior Designer",
-    content: "The versatility of Today Bond products makes them essential for both quick fixes and permanent installations.",
+    content:
+      "The versatility of Today Bond products makes them essential for both quick fixes and permanent installations.",
     rating: 3,
-    image: "https://randomuser.me/api/portraits/women/1.jpg"
+    image: "https://randomuser.me/api/portraits/women/84.jpg",
   },
   {
     id: 4,
     name: "Ravi Verma",
     role: "Construction Manager",
-    content: "I rely on Today Bond for my construction projects. The adhesion is phenomenal and consistent.",
+    content:
+      "I rely on Today Bond for my construction projects. The adhesion is phenomenal and consistent.",
     rating: 5,
-    image: "https://randomuser.me/api/portraits/men/3.jpg"
-  }
+    image: "https://randomuser.me/api/portraits/men/69.jpg",
+  },
 ];
 
 export default function Testimonials() {
