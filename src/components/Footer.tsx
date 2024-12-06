@@ -6,7 +6,12 @@ import {
   FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
-import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
+import {
+  HiMail,
+  HiPhone,
+  HiLocationMarker,
+  HiDocumentText,
+} from "react-icons/hi";
 import logo from "../assets/Logo-Today1.png";
 import img1 from "../assets/Product_images/img1.jpg";
 import img2 from "../assets/Product_images/img1.jpg";
@@ -15,10 +20,21 @@ import img4 from "../assets/Product_images/img1.jpg";
 
 const Footer: React.FC = () => {
   const socialLinks = [
-    { icon: <FaFacebookF />, url: "#", label: "Facebook" },
-    { icon: <FaInstagram />, url: "#", label: "Instagram" },
-    { icon: <FaLinkedinIn />, url: "#", label: "LinkedIn" },
-    { icon: <FaYoutube />, url: "#", label: "YouTube" },
+    {
+      icon: <FaFacebookF />,
+      url: "https://www.facebook.com/TodayBond/",
+      label: "Facebook",
+    },
+    {
+      icon: <FaInstagram />,
+      url: "https://www.instagram.com/todaybond",
+      label: "Instagram",
+    },
+    {
+      icon: <FaYoutube />,
+      url: "https://www.youtube.com/@todaybond",
+      label: "YouTube",
+    },
   ];
 
   const companyLinks = [
@@ -27,10 +43,14 @@ const Footer: React.FC = () => {
     { name: "Returns & Refunds", url: "/returns-and-refunds" },
     { name: "Shipping & Delivery", url: "/shipping-and-delivery" },
     { name: "Admin Login", url: "/admin-login" },
-    { name: "GST Number", text: "09LGDPK7641B1ZA" }
   ];
 
-  const instagramImages = [img1, img2, img3, img4];
+  const instagramImages = [
+    { src: img1, url: "https://instagram.com/post1" },
+    { src: img2, url: "https://instagram.com/post2" },
+    { src: img3, url: "https://instagram.com/post3" },
+    { src: img4, url: "https://instagram.com/post4" },
+  ];
 
   return (
     <footer className="bg-gradient-to-b from-blue-900 to-blue-950 text-gray-100">
@@ -39,6 +59,11 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <img src={logo} alt="Company Logo" className="w-40 mb-4" />
+            <p className="text-white text-sm mt-4 mb-6">
+              We offer the fastest bonding agent available on the market,
+              designed to save you time and money while enabling you to achieve
+              superior results more efficiently.
+            </p>
             <div className="mt-6 flex space-x-4">
               {socialLinks.map((social) => (
                 <a
@@ -55,7 +80,9 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Contact Us
+            </h3>
             <ul className="space-y-3 text-sm text-gray-300">
               <li className="flex items-start space-x-3">
                 <HiLocationMarker className="mt-1 flex-shrink-0 text-yellow-400" />
@@ -70,7 +97,16 @@ const Footer: React.FC = () => {
                   href="tel:+919910829792"
                   className="hover:text-white transition-colors"
                 >
-                  +91-9910829792, 1-9582976062
+                  +91-9910829792
+                </a>
+              </li>
+              <li className="flex items-center space-x-3">
+                <HiPhone className="flex-shrink-0 text-yellow-400" />
+                <a
+                  href="tel:+919582976062"
+                  className="hover:text-white transition-colors"
+                >
+                  +91-9582976062
                 </a>
               </li>
               <li className="flex items-center space-x-3">
@@ -82,25 +118,27 @@ const Footer: React.FC = () => {
                   todaybondproduct@gmail.com
                 </a>
               </li>
+              <li className="flex items-center space-x-3">
+                <HiDocumentText className="flex-shrink-0 text-yellow-400" />
+                <span>09LGDPK7641B1ZA</span>
+              </li>
             </ul>
           </div>
 
           {/* Company Links */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Company Info</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Company Info
+            </h3>
             <ul className="space-y-2 text-sm text-gray-300">
               {companyLinks.map((link, index) => (
                 <li key={index} className="flex items-center space-x-3">
-                  {link.url ? (
-                    <Link
-                      to={link.url}
-                      className="text-gray-300 hover:text-white transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  ) : (
-                    <span>{link.text}</span>
-                  )}
+                  <Link
+                    to={link.url}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -113,12 +151,18 @@ const Footer: React.FC = () => {
             </h3>
             <div className="grid grid-cols-2 gap-2">
               {instagramImages.map((image, index) => (
-                <img
+                <a
                   key={index}
-                  src={image}
-                  alt={`Instagram ${index + 1}`}
-                  className="w-full h-24 object-cover rounded-md hover:opacity-90 transition-opacity"
-                />
+                  href={image.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={image.src}
+                    alt={`Instagram ${index + 1}`}
+                    className="w-full h-24 object-cover rounded-md hover:opacity-90 transition-opacity"
+                  />
+                </a>
               ))}
             </div>
             <a
@@ -140,7 +184,7 @@ const Footer: React.FC = () => {
               Developed by{" "}
               <a
                 href="https://zuridox.com/"
-                className="text-blue-400 hover:text-blue-300"
+                className="text-blue-400 hover:text-blue-300 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
