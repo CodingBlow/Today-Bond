@@ -5,8 +5,8 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
-import banner1 from "../assets/1st HeroBanner.png";
-import banner2 from "../assets/2nd HeroBanner2.png";
+import banner1 from "../assets/1st Herobanner1.jpg";
+import banner2 from "../assets/2nd herobanner2a.jpg";
 import banner3 from "../assets/Herobannershort3.jpg";
 
 const styles = `
@@ -142,7 +142,7 @@ const Hero = () => {
               spaceBetween={0}
               effect="fade"
               autoplay={{
-                delay: 4000,
+                delay: 2000,
                 disableOnInteraction: false,
               }}
               speed={1000}

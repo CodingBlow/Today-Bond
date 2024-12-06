@@ -15,7 +15,7 @@ interface Product {
 }
 
 export default function Products() {
-  const [cart, setCart] = useState<Product[]>([]);
+  const [, setCart] = useState<Product[]>([]);
   const navigate = useNavigate();
 
   const filteredProducts = products.filter(
@@ -60,7 +60,7 @@ export default function Products() {
               className="group bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-700"
             >
               <div
-                className="relative aspect-square bg-gray-100 dark:bg-gray-700 p-2 cursor-pointer"
+                className="relative aspect-square bg-white dark:bg-white p-2 cursor-pointer"
                 onClick={() => viewProduct(product.id)}
               >
                 <img
@@ -68,7 +68,7 @@ export default function Products() {
                   alt={product.name}
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute top-2 right-2 bg-white dark:bg-gray-800 px-2 py-0.5 rounded-full text-[10px] font-semibold text-green-600 dark:text-green-400">
+                <div className="absolute top-2 right-2 bg-black dark:bg-gray-800 px-2 py-0.5 rounded-full text-[10px] font-semibold text-white dark:text-green-400">
                   {product.inStock ? "In Stock" : "Out of Stock"}
                 </div>
               </div>

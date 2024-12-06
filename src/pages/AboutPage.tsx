@@ -1,7 +1,7 @@
 import { Award, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
-import aboutimage from "../assets/aboutImage.jpg"
+import aboutimage from "../assets/aboutimage1.jpg"
 
 const values = [
   {

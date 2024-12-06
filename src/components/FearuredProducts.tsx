@@ -32,7 +32,7 @@ export default function FeaturedProducts() {
               key={product.id}
               className="group bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700"
             >
-              <div className="relative aspect-square overflow-hidden bg-gray-100 dark:bg-gray-700 p-3">
+              <div className="relative aspect-square overflow-hidden bg-gray-100 dark:bg-white p-3">
                 <img
                   src={product.image}
                   alt={product.name}

@@ -37,7 +37,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="group bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition w-60">
       <Link to={`/product/${product.id}`} className="block">
-        <div className="relative h-40 overflow-hidden">
+        <div className="relative h-40 overflow-hidden bg-white">
           <img
             src={product.image}
             alt={product.name}

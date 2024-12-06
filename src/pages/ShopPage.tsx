@@ -1,20 +1,22 @@
-import { useState, useMemo } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { products } from '../data/products';
-import ProductCard from '../components/ProductCard';
+import { useState, useMemo } from "react";
+import { useSearchParams } from "react-router-dom";
+import { products } from "../data/products";
+import ProductCard from "../components/ProductCard";
 
-const categories = ['all', 'gel', 'liquid', 'industrial'];
+const categories = ["all", "gel", "liquid", "industrial"];
 
 export default function ShopPage() {
   const [searchParams] = useSearchParams();
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const searchQuery = searchParams.get('search')?.toLowerCase() || '';
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const searchQuery = searchParams.get("search")?.toLowerCase() || "";
 
   const filteredProducts = useMemo(() => {
-    return products.filter(product => {
-      const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
-      const matchesSearch = product.name.toLowerCase().includes(searchQuery) ||
-                          product.description.toLowerCase().includes(searchQuery);
+    return products.filter((product) => {
+      const matchesCategory =
+        selectedCategory === "all" || product.category === selectedCategory;
+      const matchesSearch =
+        product.name.toLowerCase().includes(searchQuery) ||
+        product.description.toLowerCase().includes(searchQuery);
       return matchesCategory && matchesSearch;
     });
   }, [selectedCategory, searchQuery]);
@@ -25,7 +27,7 @@ export default function ShopPage() {
         <h2 className="text-3xl font-bold mb-4 md:mb-0 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           Our Products
         </h2>
-        
+
         <div className="flex space-x-4">
           {categories.map((category) => (
             <button
@@ -33,8 +35,8 @@ export default function ShopPage() {
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-full capitalize transition-all duration-200 ${
                 selectedCategory === category
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
-                  : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
+                  : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
               }`}
             >
               {category}
@@ -48,8 +50,8 @@ export default function ShopPage() {
           Search results for: "{searchQuery}"
         </p>
       )}
-      
-      <div className="grid md:grid-cols-3 gap-8">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {filteredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
