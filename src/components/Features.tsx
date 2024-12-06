@@ -39,7 +39,7 @@ export default function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-700"
+              className="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 hover:bg-blue-500 hover:from-neutral-200 dark:border-gray-700"
             >
               <div
                 className={`relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r ${feature.bgGradient} mb-4`}

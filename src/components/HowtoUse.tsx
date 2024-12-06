@@ -42,7 +42,7 @@ export default function HowToUse() {
             {steps.map((step, index) => (
               <div 
                 key={index}
-                className="relative bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl dark:shadow-gray-900/30 transition-transform duration-300 hover:transform hover:-translate-y-2"
+                className="relative bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-xl dark:shadow-gray-900/30 transition-transform duration-300 hover:transform hover:-translate-y-2 hover:bg-blue-400"
               >
                 <div className="flex flex-col items-center">
                   <div className="relative mb-4">
@@ -51,7 +51,7 @@ export default function HowToUse() {
                       alt={`Step ${index + 1}`}
                       className="w-32 h-32 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-lg"
                     />
-                    <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-blue-600 dark:bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-blue-600 dark:bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold text-center">
                       Step {step.number}
                     </div>
                   </div>

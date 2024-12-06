@@ -82,7 +82,7 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl"
+                className="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 hover:bg-blue-500 hover:from-neutral-200 dark:border-gray-700"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white mb-6">
                   <value.icon className="h-8 w-8" />
