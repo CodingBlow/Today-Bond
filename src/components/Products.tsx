@@ -66,7 +66,7 @@ export default function Products() {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 hover:text-decoration-none"
                 />
                 <div className="absolute top-2 right-2 bg-black dark:bg-gray-800 px-2 py-0.5 rounded-full text-[10px] font-semibold text-white dark:text-green-400">
                   {product.inStock ? "In Stock" : "Out of Stock"}
