@@ -51,11 +51,7 @@ export default function FeaturedProducts() {
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`h-3 w-3 ${
-                          i < Math.round(product.rating)
-                            ? "fill-current"
-                            : "text-gray-300"
-                        }`}
+                        className={`h-3 w-3 ${i < Math.round(product.rating) ? "fill-current" : "text-gray-300"}`}
                       />
                     ))}
                   </div>
@@ -69,11 +65,11 @@ export default function FeaturedProducts() {
                 </h3>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-yellow-500 dark:text-yellow-400">
+                  <span className="text-lg font-bold text-yellow-600 dark:text-yellow-400">
                     ₹{product.price.toFixed(2)}
                   </span>
                   <button
-                    className="p-1.5 rounded-full bg-yellow-500 text-white hover:bg-yellow-600 transition-colors"
+                    className="p-1.5 rounded-full bg-yellow-600 dark:bg-yellow-500 text-white hover:bg-yellow-700 dark:hover:bg-yellow-400 transition-colors"
                     aria-label={`Add ${product.name} to cart`}
                   >
                     <ShoppingCart className="h-4 w-4" />
@@ -87,12 +83,11 @@ export default function FeaturedProducts() {
         <div className="text-center mt-8">
           <Link
             to="/shop"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-600 dark:hover:bg-yellow-500 transition-colors"
           >
             View All Products
           </Link>
         </div>
-
       </div>
     </section>
   );
