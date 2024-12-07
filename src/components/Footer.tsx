@@ -12,10 +12,10 @@ import {
   HiDocumentText,
 } from "react-icons/hi";
 import logo from "../assets/Logo-Today1.png";
-import img1 from "../assets/Product_images/img1.jpg";
-import img2 from "../assets/Product_images/img1.jpg";
-import img3 from "../assets/Product_images/img1.jpg";
-import img4 from "../assets/Product_images/img1.jpg";
+import img1 from "../assets/instafooter/1.jpg";
+import img2 from "../assets/instafooter/2.jpg";
+import img3 from "../assets/instafooter/3.jpg";
+import img4 from "../assets/instafooter/4.jpg";
 
 const Footer: React.FC = () => {
   const socialLinks = [
@@ -45,10 +45,22 @@ const Footer: React.FC = () => {
   ];
 
   const instagramImages = [
-    { src: img1, url: "https://instagram.com/post1" },
-    { src: img2, url: "https://instagram.com/post2" },
-    { src: img3, url: "https://instagram.com/post3" },
-    { src: img4, url: "https://instagram.com/post4" },
+    {
+      src: img1,
+      url: "https://www.instagram.com/p/DCWEEspz_4h/?igsh=MW51NDV5OW1jMXZoZQ==",
+    },
+    {
+      src: img2,
+      url: "https://www.instagram.com/reel/C-SiwOFyEbb/?igsh=MXBocnZxM3dsdW4zYg==",
+    },
+    {
+      src: img3,
+      url: "https://www.instagram.com/reel/C-DCrNcSW5D/?igsh=MXhlOGpsYzU4Nnl6ag==",
+    },
+    {
+      src: img4,
+      url: "https://www.instagram.com/p/C1wbLukR8Bi/?igsh=MTV1ZW9qbTIzcmFpbg==",
+    },
   ];
 
   return (
@@ -165,7 +177,7 @@ const Footer: React.FC = () => {
               ))}
             </div>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/todaybond"
               target="_blank"
               rel="noopener noreferrer"
               className="block mt-4 text-center bg-yellow-400 text-white hover:bg-white hover:text-yellow-400 font-medium transition-colors py-2 px-6 rounded"

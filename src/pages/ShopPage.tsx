@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { products } from "../data/products";
 import ProductCard from "../components/ProductCard";
 
-const categories = ["all", "gel", "liquid", "industrial"];
+const categories = ["all", "gel", "liquid", "combo"];
 
 export default function ShopPage() {
   const [searchParams] = useSearchParams();
@@ -27,6 +27,21 @@ export default function ShopPage() {
         <h2 className="text-3xl font-bold mb-4 md:mb-0 bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">
           Our Products
         </h2>
+        <div className="flex flex-wrap gap-4">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`py-2 px-4 rounded-md font-semibold text-sm ${
+                selectedCategory === category
+                  ? "bg-yellow-600 text-white"
+                  : "bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+              } transition-colors`}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category.charAt(0).toUpperCase() + category.slice(1)}
+            </button>
+          ))}
+        </div>
       </div>
 
       {searchQuery && (
