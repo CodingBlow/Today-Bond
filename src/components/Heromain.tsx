@@ -4,9 +4,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 // Import images (assuming they're in src/assets/slider)
-import banner1 from "../assets/slider/m1.jpg";
-import banner2 from "../assets/slider/m2.jpg";
-import banner3 from "../assets/slider/m3.jpg";
+import banner1 from "../assets/slider/d1.jpg";
+import banner2 from "../assets/slider/d2.jpg";
+import banner3 from "../assets/slider/d3.jpg";
 
 const Hero = () => {
   const slides = [
@@ -16,7 +16,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative max-w-[1440px] mx-auto bg-gray-50 dark:bg-gray-900 py-4">
+    <section className="relative max-w-[1440px] mx-auto bg-gray-50 dark:bg-gray-900 py-8">
       <div className="container mx-auto px-4">
         <Swiper
           autoplay={{

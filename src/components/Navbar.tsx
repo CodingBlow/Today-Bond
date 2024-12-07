@@ -63,7 +63,11 @@ export default function Navbar() {
               to="/"
               className="transform hover:scale-105 transition-transform duration-200"
             >
-              <img src={Logo} alt="Today Bond Logo" className="h-20 w-auto" />
+              <img
+                src={Logo}
+                alt="Today Bond Logo"
+                className="h-12 w-auto sm:h-16 md:h-16 lg:h-16 transition-transform duration-200"
+              />
             </Link>
           </div>
 
