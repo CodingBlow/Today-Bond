@@ -1,7 +1,8 @@
 import { Award, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
-import aboutimage from "../assets/aboutimage1.jpg"
+import aboutimage from "../assets/aboutimage1.jpg";
+import { useThemeContext } from "../providers/ThemeProvider";
 
 const values = [
   {
@@ -25,27 +26,27 @@ const values = [
 ];
 
 export default function AboutPage() {
+  const { theme } = useThemeContext(); // Access theme from context
+
+  // Define theme-specific classes for the CTA section
+  const ctaBgClass =
+    theme === "dark" ? "bg-gray-800 text-white" : "bg-yellow-200 text-gray-900";
+  const ctaButtonClass =
+    theme === "dark"
+      ? "bg-gray-700 text-yellow-400 hover:bg-gray-600"
+      : "bg-white text-yellow-600 hover:bg-gray-100";
+
   return (
     <div className="py-15 bg-white dark:bg-gray-900 transition-colors duration-200">
       <Hero />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          {/* <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            About Today Bond
-          </h1> */}
-          {/* <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Leading the industry in innovative adhesive solutions since 1970
-          </p> */}
-        </div>
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
         {/* Story Section */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
               Our Story
             </h2>
-            <div className="space-y-4 text-gray-600 dark:text-gray-300">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <p>
                 Today Bond began with a simple mission: to create the strongest,
                 most reliable adhesive solutions for every need. What started in
@@ -68,7 +69,7 @@ export default function AboutPage() {
             <img
               src={aboutimage}
               alt="Today Bond Laboratory"
-              className="absolute inset-0 w-full h-full object-fit rounded-lg shadow-lg"
+              className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg"
             />
           </div>
         </div>
@@ -82,15 +83,15 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 hover:bg-blue-500 hover:from-neutral-200 dark:border-gray-700"
+                className="text-center p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 dark:bg-gray-800 hover:bg-yellow-300"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-yellow-400 text-white mb-6">
                   <value.icon className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-gray-700 dark:text-gray-300">
                   {value.description}
                 </p>
               </div>
@@ -99,7 +100,9 @@ export default function AboutPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
+        <div
+          className={`rounded-2xl p-12 text-center mb-8 transition-all duration-300 ${ctaBgClass}`}
+        >
           <h2 className="text-3xl font-bold mb-6">Join Our Journey</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Experience the difference of professional-grade adhesive solutions
@@ -107,7 +110,7 @@ export default function AboutPage() {
           </p>
           <Link
             to="/shop"
-            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-200"
+            className={`inline-block px-8 py-3 rounded-full font-semibold transition duration-200 ${ctaButtonClass}`}
           >
             Explore Our Products
           </Link>

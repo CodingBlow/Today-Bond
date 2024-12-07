@@ -34,10 +34,10 @@ export default function ContactPage() {
     <div className="py-24 bg-white dark:bg-gray-900 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent">
             Contact Us
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
             Have questions? We're here to help and would love to hear from you.
           </p>
         </div>
@@ -46,39 +46,39 @@ export default function ContactPage() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-yellow-400 mb-6">
                 Get in Touch
               </h2>
               <div className="space-y-6">
                 {/* Phone */}
                 <div className="flex items-start space-x-4">
-                  <Phone className="h-6 w-6 text-blue-600" />
+                  <Phone className="h-6 w-6 text-yellow-500" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
+                    <h3 className="font-semibold text-gray-900 dark:text-yellow-400">
                       Phone
                     </h3>
                     <a
                       href="tel:+919910829792"
-                      className="text-gray-600 dark:text-gray-300 hover:underline"
+                      className="text-gray-700 dark:text-gray-300 hover:underline"
                     >
                       +91 9910829792
                     </a>
                     <p className="text-gray-600 dark:text-gray-300">
-                      Monday -Saturday, 9am - 7pm EST
+                      Monday - Saturday, 9am - 7pm EST
                     </p>
                   </div>
                 </div>
 
                 {/* Email */}
                 <div className="flex items-start space-x-4">
-                  <Mail className="h-6 w-6 text-blue-600" />
+                  <Mail className="h-6 w-6 text-yellow-500" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
+                    <h3 className="font-semibold text-gray-900 dark:text-yellow-400">
                       Email
                     </h3>
                     <a
                       href="mailto:todaybondproduct@gmail.com"
-                      className="text-gray-600 dark:text-gray-300 hover:underline"
+                      className="text-gray-700 dark:text-gray-300 hover:underline"
                     >
                       todaybondproduct@gmail.com
                     </a>
@@ -87,12 +87,12 @@ export default function ContactPage() {
 
                 {/* GST Number */}
                 <div className="flex items-start space-x-4">
-                  <FileText className="h-6 w-6 text-blue-600" />
+                  <FileText className="h-6 w-6 text-yellow-500" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
+                    <h3 className="font-semibold text-gray-900 dark:text-yellow-400">
                       GST Number
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-700 dark:text-gray-300">
                       09LGDPK7641B1ZA
                     </p>
                   </div>
@@ -100,15 +100,15 @@ export default function ContactPage() {
 
                 {/* Address */}
                 <div className="flex items-start space-x-4">
-                  <MapPin className="h-6 w-6 text-blue-600" />
+                  <MapPin className="h-6 w-6 text-yellow-500" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
+                    <h3 className="font-semibold text-gray-900 dark:text-yellow-400">
                       Address
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-700 dark:text-gray-300">
                       C/10, G.F . DLF, Dilshad Extension 2,
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-700 dark:text-gray-300">
                       Uttar Pradesh 201005 ( India)
                     </p>
                   </div>
@@ -117,11 +117,11 @@ export default function ContactPage() {
             </div>
 
             {/* Business Hours */}
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+            <div className="bg-yellow-50 dark:bg-gray-800 p-6 rounded-lg">
+              <h3 className="font-semibold text-gray-900 dark:text-yellow-400 mb-2">
                 Business Hours
               </h3>
-              <div className="space-y-2 text-gray-600 dark:text-gray-300">
+              <div className="space-y-2 text-gray-700 dark:text-gray-300">
                 <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
                 <p>Sunday: Closed</p>
               </div>
@@ -129,8 +129,8 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          <div className="bg-gray-300 dark:bg-gray-800 p-8 rounded-lg shadow-sm">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-yellow-400 mb-6">
               Send Us a Message
             </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -148,7 +148,7 @@ export default function ContactPage() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
               </div>
 
@@ -166,7 +166,7 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
               </div>
 
@@ -184,7 +184,7 @@ export default function ContactPage() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
               </div>
 
@@ -202,13 +202,13 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-md hover:opacity-90 transition duration-200"
+                className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-6 py-3 rounded-md hover:opacity-90 transition duration-200"
               >
                 <Send className="h-5 w-5" />
                 <span>Send Message</span>

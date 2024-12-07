@@ -1,8 +1,8 @@
 export default function RefundPolicy() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800 pt-12 pb-4">
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-3xl w-full">
-        <h2 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-800 pt-12 pb-4">
+      <div className="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg shadow-lg max-w-3xl w-full">
+        <h2 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-yellow-600 to-yellow-600 bg-clip-text text-transparent">
           Refund & Exchange Policy
         </h2>
         <div className="space-y-6 text-gray-700 dark:text-gray-300">
@@ -58,7 +58,7 @@ export default function RefundPolicy() {
                   Email us at{" "}
                   <a
                     href="mailto:todaybondproduct@gmail.com"
-                    className="text-blue-500 hover:underline"
+                    className="text-yellow-500 hover:underline"
                   >
                     todaybondproduct@gmail.com
                   </a>

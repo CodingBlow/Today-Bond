@@ -1,11 +1,29 @@
+import { useThemeContext } from "../providers/ThemeProvider";
+
 export default function HowToUse() {
+  const { theme } = useThemeContext(); // Access theme from context
+
+  // Dynamic styles based on the theme
+  const backgroundClass =
+    theme === "dark" ? "bg-gray-900 to-gray-800" : "bg-gray-100 to-white";
+  const cardClass =
+    theme === "dark" ? "bg-gray-800 text-gray-300" : "bg-white text-gray-700";
+  const headingGradientClass =
+    theme === "dark"
+      ? "bg-gradient-to-r from-yellow-400 to-yellow-600"
+      : "bg-gradient-to-r from-yellow-600 to-yellow-400";
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800 pt-12 pb-4">
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-3xl w-full">
-        <h2 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+    <div
+      className={`min-h-screen flex items-center justify-center bg-gradient-to-b ${backgroundClass} pt-12 pb-4`}
+    >
+      <div className={`p-6 rounded-lg shadow-lg max-w-3xl w-full ${cardClass}`}>
+        <h2
+          className={`text-2xl font-bold mb-6 text-center ${headingGradientClass} bg-clip-text text-transparent`}
+        >
           How to Use Glue and Bond
         </h2>
-        <div className="space-y-6 text-gray-700 dark:text-gray-300">
+        <div className="space-y-6">
           <h3 className="font-semibold text-lg">Understanding Your Needs</h3>
           <p>
             Choosing the right product depends on the type of material and the
@@ -105,7 +123,7 @@ export default function HowToUse() {
             <strong>Email:</strong>{" "}
             <a
               href="mailto:todaybondproduct@gmail.com"
-              className="text-blue-500 hover:underline"
+              className="text-yellow-400 hover:underline"
             >
               todaybondproduct@gmail.com
             </a>
