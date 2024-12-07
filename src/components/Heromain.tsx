@@ -4,9 +4,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 // Import images (assuming they're in src/assets/slider)
-import banner1 from "../assets/slider/1ab.jpg";
-import banner2 from "../assets/slider/2ab.jpg";
-import banner3 from "../assets/slider/3ab.jpg";
+import banner1 from "../assets/slider/d1.jpg";
+import banner2 from "../assets/slider/d2.jpg";
+import banner3 from "../assets/slider/d3.jpg";
 
 const Hero = () => {
   const slides = [
