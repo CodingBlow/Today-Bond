@@ -9,11 +9,7 @@ import banner2 from "../assets/slider/d2.jpg";
 import banner3 from "../assets/slider/d3.jpg";
 
 const Hero = () => {
-  const slides = [
-    { image: banner1 },
-    { image: banner2 },
-    { image: banner3 },
-  ];
+  const slides = [{ image: banner1 }, { image: banner2 }, { image: banner3 }];
 
   return (
     <section className="relative max-w-[1440px] mx-auto bg-gray-50 dark:bg-gray-900 py-8">
@@ -50,7 +46,7 @@ const Hero = () => {
         {`
           .hero-swiper {
             width: 100%;
-            height: 80vh; /* Default height for large screens */
+            height: 80vh; 
           }
 
           .aspect-ratio-container {
@@ -72,7 +68,7 @@ const Hero = () => {
           /* Tablet/Intermediate screen styles */
           @media (max-width: 1024px) {
             .hero-swiper {
-              height: 40vh; /* Slightly reduced height */
+              height: 20vh; /* Slightly reduced height */
             }
 
             .slider-image {
@@ -116,4 +112,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
