@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ShoppingCart, ArrowLeft, Package, Clock, Shield } from "lucide-react";
 import { products } from "../data/products";
@@ -78,11 +77,11 @@ export default function ProductPage() {
 
       <div className="grid md:grid-cols-2 gap-12">
         {/* Product Image */}
-        <div className="relative aspect-square">
+        <div className="relative max-w-sm mx-auto">
           <img
             src={product.image}
             alt={product.name}
-            className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg"
+            className="w-full object-cover rounded-lg shadow-lg"
           />
         </div>
 

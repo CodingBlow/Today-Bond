@@ -32,10 +32,8 @@ interface BookingData {
 
 export default function AdminDashboard() {
   const [bookings, setBookings] = useState<Record<string, BookingData>>({});
-  const [filteredBookings, setFilteredBookings] = useState<
-    Record<string, BookingData>
-  >({});
-  const [selectedStatus, setSelectedStatus] = useState<string>("all"); // Default is 'all'
+  const [filteredBookings, setFilteredBookings] = useState<Record<string, BookingData>>({});
+  const [selectedStatus, setSelectedStatus] = useState<string>("all");
   const { theme } = useThemeContext(); // Access theme context
   const navigate = useNavigate();
 
@@ -51,8 +49,45 @@ export default function AdminDashboard() {
     const unsubscribe = onValue(bookingsRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
-        setBookings(data);
-        setFilteredBookings(data);
+        // Ensure the data is of type Record<string, BookingData>
+        const typedData: Record<string, BookingData> = data;
+
+        // Check and automatically update the status to "In Transit"
+        const updatedData: Record<string, BookingData> = {};
+        
+        Object.entries(typedData).forEach(([bookingId, booking]) => {
+          // Define your condition for automatic status change
+          const createdAt = new Date(booking.createdAt);
+          const now = new Date();
+          const minutesDifference = (now.getTime() - createdAt.getTime()) / 1000 / 60;
+
+          // Update status to "in-transit" after a certain time period if it's still in "default"
+          if (booking.status === "default" && minutesDifference > 30) {
+            // Update the status to "In Transit"
+            const updatedBooking = { ...booking, status: "in-transit" };
+            updatedData[bookingId] = updatedBooking;
+
+            // Push the updated status to Firebase
+            const bookingRef = ref(database, `booking/${bookingId}`);
+            update(bookingRef, { status: "in-transit" }).catch((error) => {
+              console.error("Error updating status:", error);
+            });
+          } else {
+            updatedData[bookingId] = booking; // Keep existing data
+          }
+        });
+
+        // Sort the bookings by createdAt to show the most recent first
+        const sortedBookings = Object.entries(updatedData).sort(
+          ([, a], [, b]) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        );
+
+        // Create a sorted object
+        const sortedBookingsObj = Object.fromEntries(sortedBookings) as Record<string, BookingData>;
+
+        // Set the state
+        setBookings(sortedBookingsObj);
+        setFilteredBookings(sortedBookingsObj);
       }
     });
 
@@ -114,7 +149,6 @@ export default function AdminDashboard() {
         <div className="flex flex-wrap gap-2 sm:gap-4 mb-8">
           {[
             "all",
-            "New",
             "in-transit",
             "completed",
             "not-delivered",
@@ -161,7 +195,6 @@ export default function AdminDashboard() {
                         : "bg-yellow-100 text-yellow-800 border-yellow-400"
                     } focus:ring focus:ring-yellow-300 focus:outline-none`}
                   >
-                    <option value="New">New</option>
                     <option value="in-transit">In Transit</option>
                     <option value="completed">Completed</option>
                     <option value="not-delivered">Not Delivered</option>

@@ -25,23 +25,25 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+
   const navigate = useNavigate();
   const cartItems = useCartStore((state) => state.items);
-  const cartItemsCount = cartItems.reduce(
-    (sum, item) => sum + item.quantity,
-    0
-  );
+  const cartItemsCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const { isAuthenticated, user, logout } = useAuthStore();
   const { theme, toggleTheme } = useThemeContext();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const currentScrollTop = window.scrollY;
+      setIsScrollingDown(currentScrollTop > lastScrollTop && currentScrollTop > 20);
+      setLastScrollTop(currentScrollTop);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollTop]);
 
   const handleLogout = () => {
     logout();
@@ -51,7 +53,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
+        isScrollingDown
           ? "bg-yellow-500/80 shadow-lg"
           : "bg-white/90 backdrop-blur-sm"
       }`}
@@ -59,11 +61,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
-            <Link
-              to="/"
-              className="transform hover:scale-105 transition-transform duration-200"
-            >
-              <img src={Logo} alt="Today Bond Logo" className="h-20 w-auto" />
+            <Link to="/" className="transform hover:scale-105 transition-transform duration-200">
+              <img
+                src={Logo}
+                alt="Today Bond Logo"
+                className="h-12 w-auto sm:h-16 md:h-16 lg:h-16 transition-transform duration-200"
+              />
             </Link>
           </div>
 
@@ -73,13 +76,13 @@ export default function Navbar() {
                 key={link.name}
                 to={link.path}
                 className={`text-gray-800 font-semibold transition-colors duration-200 relative group ${
-                  isScrolled ? "hover:text-white" : "hover:text-green-600"
+                  isScrollingDown ? "hover:text-white" : "hover:text-green-600"
                 }`}
               >
                 {link.name}
                 <span
                   className={`absolute bottom-0 left-0 w-full h-1 ${
-                    isScrolled ? "bg-white" : "bg-green-600"
+                    isScrollingDown ? "bg-white" : "bg-green-600"
                   } transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200`}
                 />
               </Link>
@@ -90,19 +93,19 @@ export default function Navbar() {
             <button
               onClick={toggleTheme}
               className={`p-2 rounded-full transition-colors duration-200 ${
-                isScrolled ? "hover:bg-gray-800" : "hover:bg-green-100"
+                isScrollingDown ? "hover:bg-gray-800" : "hover:bg-green-100"
               }`}
             >
               {theme === "dark" ? (
                 <Sun
                   className={`h-6 w-6 ${
-                    isScrolled ? "text-white" : "text-yellow-400"
+                    isScrollingDown ? "text-white" : "text-yellow-400"
                   }`}
                 />
               ) : (
                 <Moon
                   className={`h-6 w-6 ${
-                    isScrolled ? "text-white" : "text-black"
+                    isScrollingDown ? "text-white" : "text-black"
                   }`}
                 />
               )}
@@ -111,12 +114,12 @@ export default function Navbar() {
             <Link
               to="/cart"
               className={`relative p-2 rounded-full transition-colors duration-200 ${
-                isScrolled ? "hover:bg-gray-800" : "hover:bg-yellow-100"
+                isScrollingDown ? "hover:bg-gray-800" : "hover:bg-yellow-100"
               }`}
             >
               <ShoppingCart
                 className={`h-6 w-6 ${
-                  isScrolled ? "text-white" : "text-gray-800"
+                  isScrollingDown ? "text-white" : "text-gray-800"
                 }`}
               />
               {cartItemsCount > 0 && (
@@ -130,24 +133,24 @@ export default function Navbar() {
               <div className="relative group">
                 <button
                   className={`flex items-center space-x-2 p-2 rounded-full transition-colors duration-200 ${
-                    isScrolled ? "hover:bg-gray-800" : "hover:bg-green-100"
+                    isScrollingDown ? "hover:bg-gray-800" : "hover:bg-green-100"
                   }`}
                 >
                   <User
                     className={`h-6 w-6 ${
-                      isScrolled ? "text-white" : "text-gray-800"
+                      isScrollingDown ? "text-white" : "text-gray-800"
                     }`}
                   />
                   <span
                     className={`text-sm hidden md:block ${
-                      isScrolled ? "text-white" : "text-gray-700"
+                      isScrollingDown ? "text-white" : "text-gray-700"
                     }`}
                   >
                     {user?.name}
                   </span>
                   <ChevronDown
                     className={`h-4 w-4 ${
-                      isScrolled ? "text-white" : "text-gray-800"
+                      isScrollingDown ? "text-white" : "text-gray-800"
                     }`}
                   />
                 </button>
@@ -165,17 +168,17 @@ export default function Navbar() {
               <Link
                 to="/login"
                 className={`flex items-center space-x-2 p-2 rounded-full transition-colors duration-200 ${
-                  isScrolled ? "hover:bg-gray-800" : "hover:bg-green-100"
+                  isScrollingDown ? "hover:bg-gray-800" : "hover:bg-green-100"
                 }`}
               >
                 <User
                   className={`h-6 w-6 ${
-                    isScrolled ? "text-white" : "text-gray-800"
+                    isScrollingDown ? "text-white" : "text-gray-800"
                   }`}
                 />
                 <span
                   className={`hidden md:block ${
-                    isScrolled ? "text-white" : "text-gray-800"
+                    isScrollingDown ? "text-white" : "text-gray-800"
                   }`}
                 >
                   Sign in
@@ -186,19 +189,19 @@ export default function Navbar() {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`md:hidden p-0 rounded-full transition-colors duration-200 ${
-                isScrolled ? "hover:bg-gray-800" : "hover:bg-green-100"
+                isScrollingDown ? "hover:bg-gray-800" : "hover:bg-green-100"
               }`}
             >
               {isMenuOpen ? (
                 <X
                   className={`h-6 w-6 ${
-                    isScrolled ? "text-white" : "text-gray-800"
+                    isScrollingDown ? "text-white" : "text-gray-800"
                   }`}
                 />
               ) : (
                 <Menu
                   className={`h-6 w-6 ${
-                    isScrolled ? "text-white" : "text-gray-800"
+                    isScrollingDown ? "text-white" : "text-gray-800"
                   }`}
                 />
               )}
