@@ -5,7 +5,7 @@ export default function HowToUse() {
 
   // Dynamic styles based on the theme
   const backgroundClass =
-    theme === "dark" ? "bg-gray-900 to-gray-800" : "bg-gray-100 to-white";
+    theme === "dark" ? "bg-gray-900 to-gray-800" : "bg-yellow-800 to-yellow-700";
   const cardClass =
     theme === "dark" ? "bg-gray-800 text-gray-300" : "bg-white text-gray-700";
   const headingGradientClass =
@@ -123,13 +123,19 @@ export default function HowToUse() {
             <strong>Email:</strong>{" "}
             <a
               href="mailto:todaybondproduct@gmail.com"
-              className="text-yellow-400 hover:underline"
+              className="text-yellow-800 hover:underline"
             >
-              todaybondproduct@gmail.com
+              <b>todaybondproduct@gmail.com</b>
             </a>
           </p>
           <p>
-            <strong>Phone:</strong> +91-9910829792
+            <strong>Phone:</strong>{" "}
+            <a
+              href="tel:+919910829792"
+              className="text-yellow-800 hover:underline"
+            >
+              <b>+91-9910829792</b>
+            </a>
           </p>
         </div>
       </div>

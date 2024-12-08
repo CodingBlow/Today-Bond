@@ -1,5 +1,5 @@
 import step1 from "../assets/step1a.jpg";
-import step2 from "../assets/step2a.jpg";
+import step2 from "../assets/step2.jpg";
 import step3 from "../assets/step3a.jpg";
 import { useNavigate } from "react-router-dom";
 
@@ -7,22 +7,27 @@ const steps = [
   {
     image: step1,
     number: "01",
-    title: "Apply Today Bond",
-    description: "Apply Today Bond Adhesive sparingly - a small amount ensures optimal bonding performance.",
-  },
-  {
-    image: step2,
-    number: "02",
-    title: "Add Filler",
-    description: "Apply the filler to seal gaps and holes, creating a stronger and more reliable bond.",
+    title: "Apply to MDF, WPC, PVC, Mica, Wood, Laminate, etc.",
+    description:
+      "Apply Today Bond Adhesive sparingly to materials like MDF, WPC, PVC, Mica, Wood, Laminate, and others for optimal bonding performance.",
   },
   {
     image: step3,
+    number: "02",
+    title: "Add Filler for Marble and Tiles",
+    description:
+      "Use Today Bond Acrylic Filler to seal gaps and holes in marble and tiles, ensuring a stronger and more reliable bond.",
+  },
+  {
+    image: step2,
     number: "03",
-    title: "Final Result",
-    description: "Steps can be reversed if needed. Additional filler can be applied for enhanced strength.",
+    title: "Finish with Wood Filler",
+    description:
+      "Apply Today Bond Wood Filler to fill and strengthen wood surfaces. Additional filler can be added for enhanced durability.",
   },
 ];
+
+
 
 export default function HowToUse() {
   const navigate = useNavigate();
@@ -52,11 +57,11 @@ export default function HowToUse() {
                       className="w-32 h-32 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-lg"
                     />
                     <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-white px-4 py-1 rounded-full text-sm font-semibold text-center">
-                      Step {step.number}
+                     {step.number}
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-lg font-bold text-center text-gray-900 dark:text-white mb-2">
                     {step.title}
                   </h3>
 

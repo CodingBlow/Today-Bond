@@ -30,7 +30,7 @@ export default function AdminLogin() {
   const containerBgClass =
     theme === "dark"
       ? "bg-gray-800 from-gray-900 to-gray-800"
-      : "bg-white from-white to-white";
+      : "bg-yellow-200 to-yellow-200";
   const cardBgClass = theme === "dark" ? "bg-gray-900" : "bg-yellow-100";
   const inputClass =
     theme === "dark"
