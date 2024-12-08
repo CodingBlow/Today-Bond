@@ -57,7 +57,7 @@ export default function HowToUse() {
                       className="w-32 h-32 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-lg"
                     />
                     <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-white px-4 py-1 rounded-full text-sm font-semibold text-center">
-                     {step.number}
+                      {step.number}
                     </div>
                   </div>
 
@@ -75,7 +75,7 @@ export default function HowToUse() {
 
           <div className="mt-12 text-center">
             <button
-              onClick={() => navigate("/safety-guidelines")}
+              onClick={() => navigate("/HOW-TO-USE")}
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white font-semibold rounded-xl shadow-lg dark:shadow-yellow-900/30 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
             >
               <span className="mr-2">View Safety Guidelines</span>
