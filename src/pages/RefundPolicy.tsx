@@ -1,7 +1,10 @@
 export default function RefundPolicy() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-800 pt-12 pb-4">
-      <div className="bg-gray-200 dark:bg-gray-700 p-6 rounded-lg shadow-lg max-w-3xl w-full">
+      <div
+        className="git add src/components/Heromain.tsx
+ p-6 rounded-lg shadow-lg max-w-3xl w-full"
+      >
         <h2 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-yellow-600 to-yellow-600 bg-clip-text text-transparent">
           Refund & Exchange Policy
         </h2>
