@@ -1,6 +1,6 @@
 import IMG1 from "../assets/Product_images/img1.jpg";
 import IMG2 from "../assets/Product_images/img5.jpg";
-import IMG3 from "../assets/Product_images/img8.jpg";
+// import IMG3 from "../assets/Product_images/img8.jpg";
 import IMG4 from "../assets/Product_images/img11.jpg";
 import IMG5 from "../assets/Product_images/img14.jpg";
 import IMG6 from "../assets/Product_images/img17.jpg";
@@ -29,16 +29,14 @@ import IMG27 from "../assets/Product_images/img98.jpg";
 // import IMG29 from "../assets/Product_images/img106.jpg";
 // import IMG30 from "../assets/Product_images/img110.jpg";
 
-
-
 export const products = [
   {
     id: 1,
-    name: "Today Bond PVC Gel Glue+ Spray Activator 100Gm+50ml",
-    price: 399,
+    name: "Today Bond Spray Activator 100ml",
+    price: 459,
     image: IMG1,
     description:
-      "Professional-grade gel glue ideal for quick and precise PVC bonding applications.",
+      "Professional-grade adhesive for heavy-duty applications and reliable performance.",
     category: "gel",
     stock: 50,
     rating: 4.8,
@@ -46,11 +44,11 @@ export const products = [
   },
   {
     id: 2,
-    name: "Today Bond Instant PVC Gel Glue 100Gm",
-    price: 220,
+    name: "Today Bond Spray Activator 50ml",
+    price: 259,
     image: IMG2,
     description:
-      "Fast-setting liquid adhesive for strong and durable bonds on multiple surfaces.",
+      "Fast-setting adhesive for quick and hassle-free repairs and installations.",
     category: "liquid",
     stock: 75,
     rating: 4.9,
@@ -58,9 +56,9 @@ export const products = [
   },
   {
     id: 3,
-    name: "Today Bond Spray Activator 100ML",
-    price: 459,
-    image: IMG3,
+    name: "Today Bond Spray Activator 20ML",
+    price: 120,
+    image: IMG2,
     description:
       "Industrial-strength adhesive for heavy-duty applications and reliable performance.",
     category: "industrial",
@@ -154,11 +152,11 @@ export const products = [
   },
   {
     id: 11,
-    name: "PVC Gel Glue + Spray Activator 50Gm+20ml",
-    price: 212,
+    name: "Today Bond Instant Glue 250Gm",
+    price: 499,
     image: IMG11,
     description:
-      "Combines gel precision and spray coverage for versatile adhesive solutions.",
+      "Combines gel precision coverage for versatile adhesive solutions.",
     category: "dual",
     stock: 25,
     rating: 4.7,
@@ -286,8 +284,8 @@ export const products = [
   },
   {
     id: 22,
-    name: "Today Bond Multi-Purpose Small 20Gm",
-    price: 59,
+    name: "Today Bond Instant PVC Gel Glue 20Gm",
+    price: 45,
     image: IMG22,
     description: "Compact adhesive for everyday multipurpose bonding needs.",
     category: "small",
@@ -332,11 +330,11 @@ export const products = [
   },
   {
     id: 26,
-    name: "Today Bond Wood Filler Small 50Gm",
-    price: 105,
+    name: "Today Bond Instant PVC Gel Glue 50Gm (20PCS)",
+    price: 2099,
     image: IMG26,
-    description: "Compact wood filler adhesive for minor woodworking tasks.",
-    category: "wood",
+    description: "Best for WPC , PVC, and other plastic materials.",
+    category: "Pack",
     stock: 25,
     rating: 4.6,
     inStock: true,
@@ -352,7 +350,39 @@ export const products = [
     rating: 4.7,
     inStock: true,
   },
+  {
+    id: 28,
+    name: "Today Bond Instant Glue 125Gm",
+    price: 275,
+    image: IMG11,
+    description:
+      "Combines gel precision coverage for versatile adhesive solutions.",
+    category: "dual",
+    stock: 25,
+    rating: 4.7,
+    inStock: true,
+  },
+  {
+    id: 29,
+    name: "Today Bond Instant PVC Gel Glue 50Gm",
+    price: 115,
+    image: IMG22,
+    description: "Compact adhesive for everyday multipurpose bonding needs.",
+    category: "small",
+    stock: 25,
+    rating: 4.5,
+    inStock: true,
+  },
+  {
+    id: 30,
+    name: "Today Bond Instant Glue 100Gm",
+    price: 220,
+    image: IMG11,
+    description:
+      "Combines gel precision coverage for versatile adhesive solutions.",
+    category: "dual",
+    stock: 25,
+    rating: 4.7,
+    inStock: true,
+  },
 ];
-
-
-
