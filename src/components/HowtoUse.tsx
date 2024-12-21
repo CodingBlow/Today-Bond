@@ -7,21 +7,21 @@ const steps = [
   {
     image: step1,
     number: "01",
-    title: "Apply to MDF, WPC, PVC, Mica, Wood, Laminate, etc.",
+    title: "Today Bond For MDF, WPC, PVC, Mica, Wood, Laminate, etc.",
     description:
       "Apply Today Bond Adhesive sparingly to materials like MDF, WPC, PVC, Mica, Wood, Laminate, and others for optimal bonding performance.",
   },
   {
     image: step3,
     number: "02",
-    title: "Add Filler for Marble and Tiles",
+    title: "Today Bond Filler for Marble and Tiles",
     description:
       "Use Today Bond Acrylic Filler to seal gaps and holes in marble and tiles, ensuring a stronger and more reliable bond.",
   },
   {
     image: step2,
     number: "03",
-    title: "Finish with Wood Filler",
+    title: "Today Bond For Wood Filler",
     description:
       "Apply Today Bond Wood Filler to fill and strengthen wood surfaces. Additional filler can be added for enhanced durability.",
   },
