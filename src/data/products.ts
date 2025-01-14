@@ -1,388 +1,316 @@
-import IMG1 from "../assets/Product_images/img1.jpg";
-import IMG2 from "../assets/Product_images/img5.jpg";
-// import IMG3 from "../assets/Product_images/img8.jpg";
-import IMG4 from "../assets/Product_images/img11.jpg";
-import IMG5 from "../assets/Product_images/img14.jpg";
-import IMG6 from "../assets/Product_images/img17.jpg";
-import IMG7 from "../assets/Product_images/img20.jpg";
-import IMG8 from "../assets/Product_images/img23.jpg";
-import IMG9 from "../assets/Product_images/img26.jpg";
-import IMG10 from "../assets/Product_images/img29.jpg";
-import IMG11 from "../assets/Product_images/img32.jpg";
-import IMG12 from "../assets/Product_images/img37.jpg";
-import IMG13 from "../assets/Product_images/img41.jpg";
-import IMG14 from "../assets/Product_images/img45.jpg";
-import IMG15 from "../assets/Product_images/img49.jpg";
-import IMG16 from "../assets/Product_images/img53.jpg";
-import IMG17 from "../assets/Product_images/img57.jpg";
-import IMG18 from "../assets/Product_images/img61.jpg";
-import IMG19 from "../assets/Product_images/img65.jpg";
-import IMG20 from "../assets/Product_images/img69.jpg";
-import IMG21 from "../assets/Product_images/img73.jpg";
-import IMG22 from "../assets/Product_images/img78.jpg";
-import IMG23 from "../assets/Product_images/img82.jpg";
-import IMG24 from "../assets/Product_images/img86.jpg";
-import IMG25 from "../assets/Product_images/img90.jpg";
-import IMG26 from "../assets/Product_images/img94.jpg";
-import IMG27 from "../assets/Product_images/img98.jpg";
-// import IMG28 from "../assets/Product_images/img102.jpg";
-// import IMG29 from "../assets/Product_images/img106.jpg";
-// import IMG30 from "../assets/Product_images/img110.jpg";
+import IMG1 from "../assets/Product_images/1.jpg";
+import IMG2 from "../assets/Product_images/2.jpg";
+import IMG3 from "../assets/Product_images/3.jpg";
+import IMG4 from "../assets/Product_images/4.jpg";
+import IMG5 from "../assets/Product_images/5.jpg";
+import IMG6 from "../assets/Product_images/6.jpg";
+import IMG7 from "../assets/Product_images/7.jpg";
+import IMG8 from "../assets/Product_images/8.jpg";
+import IMG9 from "../assets/Product_images/9.jpg";
+import IMG10 from "../assets/Product_images/10.jpg";
+import IMG11 from "../assets/Product_images/11.jpg";
+import IMG12 from "../assets/Product_images/12.jpg";
+import IMG13 from "../assets/Product_images/13.jpg";
+import IMG14 from "../assets/Product_images/14.jpg";
+import IMG15 from "../assets/Product_images/15.jpg";
+import IMG16 from "../assets/Product_images/16.jpg";
+import IMG17 from "../assets/Product_images/17.jpg";
+import IMG18 from "../assets/Product_images/18.jpg";
+import IMG19 from "../assets/Product_images/19.jpg";
+import IMG20 from "../assets/Product_images/20.jpg";
+import IMG21 from "../assets/Product_images/21.jpg";
+import IMG22 from "../assets/Product_images/22.jpg";
+import IMG23 from "../assets/Product_images/23.jpg";
+import IMG24 from "../assets/Product_images/24.jpg";
+import IMG25 from "../assets/Product_images/25.jpg";
+import IMG26 from "../assets/Product_images/26.jpg";
 
 export const products = [
   {
     id: 1,
-    name: "Today Bond Spray Activator 100ml",
-    price: 459,
+    name: "Today Bond Wood Filler",
+    price: 395,
     image: IMG1,
-    description:
-      "Professional-grade adhesive for heavy-duty applications and reliable performance.",
-    category: "gel",
+    category: "instant glue",
     stock: 50,
-    rating: 4.8,
     inStock: true,
+    rating: 4.5,
+    description:
+      "Perfect for filling wood surfaces with precision and strength.",
   },
   {
     id: 2,
-    name: "Today Bond Spray Activator 50ml",
-    price: 259,
+    name: "Today Bond Wood Filler 125 Gm",
+    price: 215,
     image: IMG2,
-    description:
-      "Fast-setting adhesive for quick and hassle-free repairs and installations.",
-    category: "liquid",
-    stock: 75,
-    rating: 4.9,
+    category: "instant glue",
+    stock: 40,
     inStock: true,
+    rating: 4.3,
+    description: "Compact and reliable wood filler for all your needs.",
   },
   {
     id: 3,
-    name: "Today Bond Spray Activator 20ML",
-    price: 120,
-    image: IMG2,
-    description:
-      "Industrial-strength adhesive for heavy-duty applications and reliable performance.",
-    category: "industrial",
-    stock: 30,
-    rating: 4.7,
+    name: "Today Bond Wood Filler (50 Gm)",
+    price: 110,
+    image: IMG3,
+    category: "instant glue",
+    stock: 60,
     inStock: true,
+    rating: 4.1,
+    description: "Quick-fix wood filler, ideal for small projects.",
   },
   {
     id: 4,
-    name: "Pvc Gel Glue + Spray Activator 125Gm+50ml",
-    price: 489,
+    name: "Today Bond Instant Glue (Special for Tiles & Marble) 50 Gm",
+    price: 145,
     image: IMG4,
-    description:
-      "Fine-tip applicator for intricate work, ensuring clean and precise bonding.",
-    category: "gel",
-    stock: 45,
-    rating: 4.6,
-    inStock: true,
+    category: "instant glue",
+    stock: 0,
+    inStock: false,
+    rating: 4.7,
+    description: "Specialized glue for tiles and marble with strong adhesion.",
   },
   {
     id: 5,
-    name: "Instant Glue Wood Filler 125Gm",
-    price: 190,
+    name: "Today Bond (Acrylic Grade) 50 Gm",
+    price: 155,
     image: IMG5,
-    description:
-      "Versatile liquid adhesive suitable for use on wood, plastic, and metal surfaces.",
-    category: "liquid",
-    stock: 60,
-    rating: 4.5,
+    category: "instant glue",
+    stock: 45,
     inStock: true,
+    rating: 4.6,
+    description: "Acrylic grade glue for versatile bonding applications.",
   },
   {
     id: 6,
-    name: "Today Bond Instant PVC Gel Glue 125Gm",
-    price: 275,
+    name: "Today Bond Instant Glue (10 Gm) Box of 25 pcs",
+    price: 385,
     image: IMG6,
-    description:
-      "Maximum-strength adhesive designed for construction-grade projects and repairs.",
-    category: "industrial",
-    stock: 25,
-    rating: 4.9,
+    category: "instant glue",
+    stock: 35,
     inStock: true,
+    rating: 4.8,
+    description: "Bulk pack instant glue, perfect for industrial use.",
   },
   {
     id: 7,
-    name: "Today Bond Instant PVC Gel Glue 20Gm",
-    price: 45,
+    name: "Today Bond Instant Glue (12 Gm) Pack of 25 pcs",
+    price: 425,
     image: IMG7,
-    description:
-      "Compact and efficient adhesive for small, everyday repairs and fixes.",
-    category: "small",
-    stock: 25,
-    rating: 4.8,
+    category: "instant glue",
+    stock: 30,
     inStock: true,
+    rating: 4.4,
+    description: "Reliable pack of instant glue for medium-scale projects.",
   },
   {
     id: 8,
-    name: "Activator for Cyanoacrylate Adhesive 20ML",
-    price: 120,
+    name: "Today Bond Instant Glue 20 Gm (Pack of 25 pcs)",
+    price: 655,
     image: IMG8,
-    description:
-      "All-purpose liquid adhesive for bonding a variety of materials seamlessly.",
-    category: "multipurpose",
-    stock: 25,
-    rating: 4.7,
+    category: "instant glue",
+    stock: 20,
     inStock: true,
+    rating: 4.6,
+    description: "Large pack instant glue for extensive bonding needs.",
   },
   {
     id: 9,
-    name: "Instant Glue Wood Filler 250Gm",
-    price: 350,
+    name: "Today Bond Instant Glue 15 Gm (Pack of 25 pcs)",
+    price: 510,
     image: IMG9,
-    description:
-      "High-performance adhesive for larger projects requiring industrial strength.",
-    category: "large",
+    category: "instant glue",
     stock: 25,
-    rating: 4.9,
     inStock: true,
+    rating: 4.2,
+    description: "Compact and powerful glue pack for effective results.",
   },
   {
     id: 10,
-    name: "Today Bond Instant PVC Gel Glue 250Gm",
-    price: 499,
+    name: "Today Bond Acrylic Grade (20 Gm)",
+    price: 71,
     image: IMG10,
-    description:
-      "Premium adhesive offering superior strength and durability for critical tasks.",
-    category: "large",
-    stock: 25,
-    rating: 4.9,
+    category: "instant glue",
+    stock: 55,
     inStock: true,
+    rating: 4.5,
+    description: "High-quality acrylic glue for all-purpose bonding.",
   },
   {
     id: 11,
-    name: "Today Bond Instant Glue 250Gm",
-    price: 499,
+    name: "Today Bond Instant Glue Special (20 Gm)",
+    price: 65,
     image: IMG11,
-    description:
-      "Combines gel precision coverage for versatile adhesive solutions.",
-    category: "dual",
-    stock: 25,
-    rating: 4.7,
+    category: "instant glue",
+    stock: 50,
     inStock: true,
+    rating: 4.4,
+    description: "Special-grade instant glue for professional usage.",
   },
   {
     id: 12,
-    name: "Today Bond Instant PVC Gel Glue 50Gm",
-    price: 115,
+    name: "Today Bond HV PVC Gel Glue 250 Gm",
+    price: 651,
     image: IMG12,
-    description:
-      "Quick-drying liquid adhesive for fast and hassle-free repairs.",
-    category: "liquid",
-    stock: 25,
-    rating: 4.6,
+    category: "gel glue",
+    stock: 15,
     inStock: true,
+    rating: 4.7,
+    description: "Heavy-duty gel glue for high-precision tasks.",
   },
   {
     id: 13,
-    name: "Today Bond Instant PVC Gel Glue pack of 20pcs 50Gm",
-    price: 2099,
+    name: "Today Bond HV PVC Gel Glue 125 Gm",
+    price: 315,
     image: IMG13,
-    description:
-      "Economical pack of high-performance gel adhesives for bulk use.",
-    category: "bulk",
+    category: "gel glue",
     stock: 25,
-    rating: 4.8,
     inStock: true,
+    rating: 4.5,
+    description: "Durable gel glue for medium-scale projects.",
   },
   {
     id: 14,
-    name: "Spray Activator 50ML",
-    price: 259,
+    name: "Today Bond HV PVC Gel Glue 100 Gm",
+    price: 281,
     image: IMG14,
-    description:
-      "Precision spray adhesive for bonding large surfaces quickly and effectively.",
-    category: "spray",
-    stock: 25,
-    rating: 4.7,
+    category: "gel glue",
+    stock: 40,
     inStock: true,
+    rating: 4.3,
+    description: "Versatile gel glue for everyday use.",
   },
   {
     id: 15,
-    name: "Today Bond Acrylic Grade 50Gm",
-    price: 150,
+    name: "Today Bond MV PVC Gel Glue (Fabric Grade) 125 Gm",
+    price: 321,
     image: IMG15,
-    description:
-      "Specially formulated adhesive for bonding acrylic materials with ease.",
-    category: "specialized",
-    stock: 25,
-    rating: 4.8,
+    category: "gel glue",
+    stock: 35,
     inStock: true,
+    rating: 4.6,
+    description: "Special fabric-grade glue for superior results.",
   },
   {
     id: 16,
-    name: "Today Bond Instant Glue industrial box 12Gm (25pcs)",
-    price: 399,
+    name: "Today Bond HV PVC Gel Glue 20 Gm",
+    price: 99,
     image: IMG16,
-    description:
-      "Convenient pack of instant adhesives for multiple household and industrial uses.",
-    category: "bulk",
-    stock: 25,
-    rating: 4.9,
+    category: "gel glue",
+    stock: 60,
     inStock: true,
+    rating: 4.1,
+    description: "Compact gel glue for quick repairs.",
   },
   {
     id: 17,
-    name: "Today Bond Instant Glue Small industrial box 10Gm (25pcs)",
-    price: 330,
+    name: "Today Bond HV PVC Gel Glue 50 Gm",
+    price: 149,
     image: IMG17,
-    description:
-      "Portable and compact instant glue pack for on-the-go repairs.",
-    category: "bulk",
-    stock: 25,
-    rating: 4.7,
+    category: "gel glue",
+    stock: 50,
     inStock: true,
+    rating: 4.3,
+    description: "Reliable gel glue for small to medium repairs.",
   },
   {
     id: 18,
-    name: "Today Bond Combo Adhesive Pack gel glue + spray Activator 250Gm + 100ml",
-    price: 999,
+    name: "Today Bond Spray Activator (50 Ml)",
+    price: 215,
     image: IMG18,
-    description:
-      "A versatile combo pack featuring large and small adhesives for diverse needs.",
-    category: "combo",
-    stock: 25,
-    rating: 4.9,
+    category: "spray",
+    stock: 40,
     inStock: true,
+    rating: 4.5,
+    description: "Efficient spray activator for quick bonding.",
   },
   {
     id: 19,
-    name: "Today Bond Debonder Fast 100ml",
-    price: 250,
+    name: "Today Bond Spray Activator 100 Ml",
+    price: 550,
     image: IMG19,
-    description:
-      "Efficient adhesive remover for stubborn residue and clean surfaces.",
-    category: "remover",
-    stock: 25,
-    rating: 4.8,
+    category: "spray",
+    stock: 30,
     inStock: true,
+    rating: 4.6,
+    description: "Larger capacity spray activator for industrial use.",
   },
   {
     id: 20,
-    name: "Today Bond Debonder Fast 50ml",
-    price: 125,
+    name: "Today Bond Debonder Fast (50 Ml)",
+    price: 175,
     image: IMG20,
-    description:
-      "Compact adhesive remover for precision tasks and quick cleanup.",
-    category: "remover",
-    stock: 25,
-    rating: 4.6,
+    category: "spray",
+    stock: 20,
     inStock: true,
+    rating: 4.4,
+    description: "Fast and effective debonder for adhesives.",
   },
   {
     id: 21,
-    name: "Today Bond Instant Glue 20Gm 25pcs",
-    price: 599,
+    name: "Today Bond Debonder Fast 100 Ml",
+    price: 299,
     image: IMG21,
-    description:
-      "High-quality instant glue pack for large-scale applications and convenience.",
-    category: "bulk",
-    stock: 25,
-    rating: 4.8,
+    category: "spray",
+    stock: 10,
     inStock: true,
+    rating: 4.3,
+    description: "Larger capacity debonder for professional use.",
   },
   {
     id: 22,
-    name: "Today Bond Instant PVC Gel Glue 20Gm",
-    price: 45,
+    name: "Today Bond Spray Activator 20 Ml",
+    price: 145,
     image: IMG22,
-    description: "Compact adhesive for everyday multipurpose bonding needs.",
-    category: "small",
+    category: "spray",
     stock: 25,
-    rating: 4.5,
     inStock: true,
+    rating: 4.2,
+    description: "Compact spray activator for quick fixes.",
   },
   {
     id: 23,
-    name: "Today Bond Round Instant Glue Pack 15Gm 25pcs",
-    price: 499,
+    name: "Today Bond HV PVC Gel Glue + Spray Activator Combo (50 Gm + 50 Ml)",
+    price: 350,
     image: IMG23,
-    description:
-      "Round adhesive pack for precise application and versatile use.",
-    category: "specialized",
-    stock: 25,
-    rating: 4.7,
+    category: "combo",
+    stock: 15,
     inStock: true,
+    rating: 4.7,
+    description: "Convenient combo pack for multi-purpose usage.",
   },
   {
     id: 24,
-    name: "Today Bond Round Bottle Industrial Box Glue Pack 20Gm 25pcs",
-    price: 599,
+    name: "Today Bond HV PVC Gel Glue + Spray Activator Combo (125 Gm + 50 Ml)",
+    price: 490,
     image: IMG24,
-    description: "Larger round adhesive pack designed for heavy-duty tasks.",
-    category: "specialized",
-    stock: 25,
-    rating: 4.9,
+    category: "combo",
+    stock: 10,
     inStock: true,
+    rating: 4.6,
+    description: "Versatile combo pack for advanced bonding.",
   },
   {
     id: 25,
-    name: "Today Bond Wood Filler 50Gm(20PCS)",
-    price: 1899,
+    name: "Today Bond HV PVC Gel Glue + Spray Activator Combo (250 Gm + 100 Ml)",
+    price: 822,
     image: IMG25,
-    description:
-      "Bulk wood filler adhesive for carpentry projects and repairs.",
-    category: "wood",
-    stock: 25,
-    rating: 4.8,
+    category: "combo",
+    stock: 5,
     inStock: true,
+    rating: 4.8,
+    description: "High-capacity combo pack for professional projects.",
   },
   {
     id: 26,
-    name: "Today Bond Instant PVC Gel Glue 50Gm (20PCS)",
-    price: 2099,
+    name: "Today Bond HV PVC Gel Glue + Spray Activator Combo (20 Gm + 20 Ml)",
+    price: 205,
     image: IMG26,
-    description: "Best for WPC , PVC, and other plastic materials.",
-    category: "Pack",
+    category: "combo",
     stock: 25,
-    rating: 4.6,
     inStock: true,
-  },
-  {
-    id: 27,
-    name: "Today Bond Instant Glue Marble & Tiles 50Gm",
-    price: 150,
-    image: IMG27,
-    description: "Reliable and efficient adhesive for multipurpose tasks.",
-    category: "multipurpose",
-    stock: 25,
-    rating: 4.7,
-    inStock: true,
-  },
-  {
-    id: 28,
-    name: "Today Bond Instant Glue 125Gm",
-    price: 275,
-    image: IMG11,
-    description:
-      "Combines gel precision coverage for versatile adhesive solutions.",
-    category: "dual",
-    stock: 25,
-    rating: 4.7,
-    inStock: true,
-  },
-  {
-    id: 29,
-    name: "Today Bond Instant PVC Gel Glue 50Gm",
-    price: 115,
-    image: IMG22,
-    description: "Compact adhesive for everyday multipurpose bonding needs.",
-    category: "small",
-    stock: 25,
-    rating: 4.5,
-    inStock: true,
-  },
-  {
-    id: 30,
-    name: "Today Bond Instant Glue 100Gm",
-    price: 220,
-    image: IMG11,
-    description:
-      "Combines gel precision coverage for versatile adhesive solutions.",
-    category: "dual",
-    stock: 25,
-    rating: 4.7,
-    inStock: true,
+    rating: 4.4,
+    description: "Compact and efficient combo for small-scale tasks.",
   },
 ];

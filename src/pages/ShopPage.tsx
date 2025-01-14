@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { products } from "../data/products";
 import ProductCard from "../components/ProductCard";
 
-const categories = ["all", "gel", "liquid", "combo"];
+const categories = ["all", "instant glue", "gel glue", "spray", "combo"];
 
 export default function ShopPage() {
   const [searchParams] = useSearchParams();
