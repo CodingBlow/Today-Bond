@@ -6,10 +6,16 @@ import "swiper/css/navigation";
 // Import images (assuming they're in src/assets/slider)
 import banner1 from "../assets/slider/1.jpg";
 import banner2 from "../assets/slider/2.jpg";
-import banner3 from "../assets/slider/4.jpg";
+import banner3 from "../assets/slider/3.jpg";
+import banner4 from "../assets/slider/4.jpg"; 
 
 const Hero = () => {
-  const slides = [{ image: banner1 }, { image: banner2 }, { image: banner3 }];
+  const slides = [
+    { image: banner1 },
+    { image: banner2 },
+    { image: banner3 },
+    { image: banner4 }, 
+  ];
 
   return (
     <section className="relative max-w-[1440px] mx-auto bg-gray-50 dark:bg-gray-900 py-8">
