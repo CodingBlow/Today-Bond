@@ -1,7 +1,7 @@
 import { Award, Shield, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
-import aboutimage from "../assets/aboutimage1.jpg";
+import aboutimage from "../assets/slider/4.jpg";
 import { useThemeContext } from "../providers/ThemeProvider";
 
 const values = [
@@ -69,7 +69,7 @@ export default function AboutPage() {
             <img
               src={aboutimage}
               alt="Today Bond Laboratory"
-              className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg"
+              className="absolute inset-0 w-full h-full object-contain rounded-lg shadow-lg"
             />
           </div>
         </div>
