@@ -5,9 +5,9 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
-import banner1 from "../assets/slider/3.jpg";
-import banner2 from "../assets/slider/1.jpg";
-import banner3 from "../assets/slider/2.jpg";
+import banner1 from "../assets/1st Herobanner1.jpg";
+import banner2 from "../assets/2nd herobanner2a.jpg";
+import banner3 from "../assets/Herobannershort3.jpg";
 import { useThemeContext } from "../providers/ThemeProvider";
 
 const Hero = () => {

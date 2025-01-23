@@ -14,14 +14,14 @@ const steps = [
   {
     image: step3,
     number: "02",
-    title: "Today Bond Filler for Marble and Tiles",
+    title: "Today Bond (Special for Tiles And Marble",
     description:
       "Use Today Bond Acrylic Filler to seal gaps and holes in marble and tiles, ensuring a stronger and more reliable bond.",
   },
   {
     image: step2,
     number: "03",
-    title: "Today Bond For Wood Filler",
+    title: "Today Bond Wood Filler For",
     description:
       "Apply Today Bond Wood Filler to fill and strengthen wood surfaces. Additional filler can be added for enhanced durability.",
   },
