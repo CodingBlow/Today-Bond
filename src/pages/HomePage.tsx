@@ -6,7 +6,7 @@ import VideoSection from "../components/VideoSection";
 import FeaturedProducts from "../components/FearuredProducts";
 import HowToUse from "../components/HowtoUse";
 import Googlemap from "../components/Googlemap";
-import Whatsapp from "../components/Whatsapp";
+
 import Heromain from "../components/Heromain";
 import Lifecycle from "../components/ProductLifecycle";
 
@@ -19,7 +19,7 @@ export default function HomePage() {
       <Heromain />
       <Features />
 
-      <Whatsapp />
+   
       <FeaturedProducts />
       <Lifecycle />
       <VideoSection />
